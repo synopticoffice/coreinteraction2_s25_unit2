@@ -4,9 +4,132 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Your Name Here</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   
   </head>
-  <body>
-  
-  </body>
+  <style>
+    :root {
+      --base-weight: 400;
+      --hover-weight: 700;
+      --click-rotate: 15deg;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Limelight", sans-serif;
+      height: 100vh;
+      background: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .letter {
+      font-variation-settings: 'wght' var(--base-weight);
+      transition: all 0.3s ease;
+      font-size: 16vw;
+      padding: 0 0.1em;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .letter:hover {
+      font-variation-settings: 'wght' var(--hover-weight);
+      color: #222;
+      transform: scale(1.1);
+    }
+
+    .letter:active {
+      transform: rotate(var(--click-rotate)) scale(1.05);
+      color: hotpink;
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 18vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 20vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 22vw;
+      }
+    }
+
+    .letter {
+  position: relative;
+  font-variation-settings: 'wght' var(--base-weight);
+  transition: all 0.3s ease;
+  font-size: 16vw;
+  padding: 0 0.1em;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  color: #000;
+  overflow: hidden;
+}
+
+.letter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+  transition: none;
+  mix-blend-mode: screen;
+}
+
+.letter:hover::before {
+  animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 150%;
+  }
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">S</span>
+    <span class="letter">E</span>
+    <span class="letter">R</span>
+    <span class="letter">E</span>
+    <span class="letter">N</span>
+    <span class="letter">A</span>
+  </div>
+</body>
   </html>
