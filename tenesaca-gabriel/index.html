@@ -1,12 +1,143 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Tenesaca Nametag</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            background-color: #ffffff;
+        }
+
+        .name {            
+            letter-spacing: -1.2em;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .letter {
+            font-size: 15em;
+            font-weight: 200;
+            display: inline-block; 
+            position: relative;
+            transition: transform 0.275s ease, 
+                        font-weight 0.275s ease-in-out,
+                        margin 0.275s ease-in-out,
+                        color 0.275s ease-in-out,
+                        font-size 0.275s ease-in-out;
+            padding: 0.05em 0;
+            vertical-align: baseline;
+        }
+
+        .disable {
+            font-size: 15em;
+        }
+
+        .letter:hover {
+            font-size: 20em;
+            font-weight: 425;
+            margin: 0em 0.075em;
+            cursor: pointer;
+        }
+
+        .letter:active {
+            color: rgb(34, 81, 251);
+            font-size: 25em;
+            font-weight: 600;
+        }
+
+        .empty {
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 900px) {
+            .name {
+                letter-spacing: -0.8em;
+            }
+            
+            .letter, .disable {
+                font-size: 10em;
+            }
+
+            .letter:hover {
+                font-size: 12.5em;
+                font-weight: 400;
+                margin: 0em 0.075em;
+            }
+
+            .letter:active {
+                font-size: 16em;
+                font-weight: 600;
+            }
+        }
+        
+        @media screen and (max-width: 650px) {
+            .name {
+                letter-spacing: -0.4em;
+            }
+            
+            .letter, .disable {
+                font-size: 5em;
+            }
+
+            .letter:hover {
+                font-size: 7.5em;
+                margin: 0em 0.05em;
+            }
+
+            .letter:active {
+                font-size: 9em;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .name {
+                letter-spacing: 0em;
+            }
+
+            .letter, .disable {
+                font-size: 2.5em;
+            }
+
+            .letter:hover {
+                font-size: 4em;
+                margin: 0em 0.0125em;
+            }
+
+            .letter:active {
+                font-size: 6em;
+                font-weight: 600;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter" class="red">g</span>
+        <span class="letter">a</span>
+        <span class="letter">b</span>
+        <span class="letter">e</span>
+        <span class="disable">&nbsp;</span>
+        <span class="letter">t</span>
+        <span class="letter">.</span>
+    </div>
+</body>
+</html>
