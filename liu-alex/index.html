@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Composition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+      font-family: 'Roboto Flex', sans-serif;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .letter {
+      font-size: 20vw;
+      font-variation-settings: "wght" 400;
+      transition: transform 0.3s ease, font-variation-settings 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .letter:hover {
+      transform: scale(1.2) rotate(-5deg);
+      font-variation-settings: "wght" 700;
+      color: #ff5e5e;
+    }
+
+    .letter.clicked {
+      transform: rotate(15deg) scale(0.9);
+      font-variation-settings: "wght" 900;
+      color: #2e86de;
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 16vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 22vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 26vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">A</span>
+    <span class="letter">L</span>
+    <span class="letter">E</span>
+    <span class="letter">X</span>
+  </div>
+
+  <script>
+    document.querySelectorAll('.letter').forEach(letter => {
+      letter.addEventListener('click', () => {
+        letter.classList.toggle('clicked');
+      });
+    });
+  </script>
+</body>
+</html>
