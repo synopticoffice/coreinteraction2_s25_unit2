@@ -3,10 +3,68 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Autumn</title>
+      <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: hotpink;
+            overflow: hidden;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-variation-settings:
+            "wdth" 100;
+        }
+        .name {
+            display: flex;
+            gap: 10px;
+            font-size: 15vw;
+            font-variation-settings:
+            "wdth" 100;
+        }
+        .letter {
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+        .letter:hover {
+            color: rgb(172, 0, 86);
+            transform: scale(1.2);
+        }
+        .letter:active {
+            transform: rotate(10deg);
+        }
+        @media (max-width: 900px) {
+            .name {
+                font-size: 20vw;
+            }
+        }
+        @media (max-width: 650px) {
+            .name {
+                font-size: 25vw;
+            }
+        }
+        @media (max-width: 450px) {
+            .name {
+                font-size: 30vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter">A</span>
+        <span class="letter">u</span>
+        <span class="letter">t</span>
+        <span class="letter">u</span>
+        <span class="letter">m</span>
+        <span class="letter">n</span>
+    </div>
+</body>
+</html>
