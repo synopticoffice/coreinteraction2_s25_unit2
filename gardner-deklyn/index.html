@@ -3,10 +3,153 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Deklyn Gardner</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
   
+
+      <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .rubik-glitch-regular {
+        font-family: "Rubik Glitch", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: "Rubik Glitch", system-ui;
+        }
+
+        .envelope{
+          display: flex;
+          font-size: 20vw;
+          text-align: center;
+        }
+
+        .d:hover{
+          color: blue;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .d:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        .e:hover{
+          color: purple;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .e:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        .k:hover{
+          color: green;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .k:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        .l:hover{
+          color: lightblue;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .l:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        .y:hover{
+          color: #DAB1DA;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .y:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+        .n:hover{
+          color: lightgreen;
+          font-size: 12vw;
+          transition-property: all;
+          transition: .5s linear
+        }
+
+        .n:active{
+          animation-name: spin; 
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes spin { 
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg); 
+            }
+        }
+
+
+      </style>
   </head>
+
+
   <body>
-  
+
+    <div class="envelope">
+        <div class="d">D</div>
+        <div class="e">E</div>
+        <div class="k">K</div>
+        <div class="l">L</div>
+        <div class="y">Y</div>
+        <div class="n">N</div>
+
+
+    </div>
+
+
+
   </body>
   </html>
