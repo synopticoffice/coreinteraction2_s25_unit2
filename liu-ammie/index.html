@@ -3,10 +3,192 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Ammie</title>
+      <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope{
+          display: grid;
+          grid-template-columns: repeat(5,1fr);
+          grid-template-rows: auto;
+          width:100vw;
+          height:100vh;
+          background-color: black;  
+        }
+
+        .envelope > div {
+          display: grid;
+          place-items: center;
+          text-align: center;
+          background-color: none; 
+        }
+
+        .name{
+          background-color: none; 
+          color: blue; 
+          font-family: "Montserrat", sans-serif;
+          font-size: 10em; 
+          font-weight: 600;
+          font-style: normal;
+          font-variation-settings: "grad" -50, /* -50 to 100 */
+                                    "wdth" 50; 
+          font-stretch: 1% 500%
+        }
+
+        #a:hover {
+          animation: textchange 4s ease infinite; 
+        }
+
+        #m1:hover {
+          animation: textchange 4s ease infinite; 
+        }
+
+        #m2:hover {
+          animation: textchange 4s ease infinite; 
+        }
+
+        #i:hover {
+          animation: textchange 4s ease infinite; 
+        }
+
+        #e:hover {
+          animation: textchange 4s ease infinite; 
+        }
+
+        @keyframes textchange {
+            0% {
+                -webkit-transform:scale(1,1);
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                          "wdth" 50;
+            }
+            25% {
+                -webkit-transform:scale(2,1);
+                font-weight: 900;
+                font-variation-settings: "grad" -50,
+                                         "wdth" 50;
+            }
+            50% {
+                -webkit-transform:scale(2,2);
+                font-stretch: 100%; 
+                font-weight: 900;
+                font-variation-settings: "grad" 100,
+                                         "wdth" 50;
+            }
+            75% {
+                -webkit-transform:scale(1,2);
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                         "wdth" 150;
+            }
+            100% {
+                -webkit-transform:scale(1,1);
+                font-stretch: 0%; 
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                          "wdth" 50;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+          .name {
+            font-size:4em;
+                }
+          #a {
+            position: absolute; 
+            top: 40%;
+            left: 10%;   
+          }
+
+          #m1 {
+            position: absolute; 
+            top: 40%; 
+            left:25%;
+
+          }
+
+          #m2 {
+            position: absolute;
+            top: 40%; 
+            left:45%; 
+          }
+
+          #i {
+            position: absolute; 
+            top: 40%;
+            left:65%;   
+          }
+
+          #e {
+            position: absolute; 
+            top: 40%;  
+            left:80%; 
+          }
+        }
+
+        @media screen and (max-width: 450px) {
+          .name {
+            font-size:4em;
+                }
+          #a {
+            position: absolute; 
+            top: 40%;
+            left: 10%;   
+          }
+
+          #m1 {
+            position: absolute; 
+            top: 40%; 
+            left:25%;
+
+          }
+
+          #m2 {
+            position: absolute;
+            top: 40%; 
+            left:45%; 
+          }
+
+          #i {
+            position: absolute; 
+            top: 40%;
+            left:65%;   
+          }
+
+          #e {
+            position: absolute; 
+            top: 40%;  
+            left:80%; 
+          }
+        }
+
+      </style>
   
   </head>
   <body>
-  
+    <div class="envelope">
+      <div class="name" id="a">
+        a
+      </div>
+      <div class="name" id="m1">
+        m
+      </div>
+      <div class="name" id="m2">
+        m
+      </div>
+      <div class="name" id="i">
+        i
+      </div>
+      <div class="name" id="e">
+        e
+      </div>
+    </div>
   </body>
   </html>
