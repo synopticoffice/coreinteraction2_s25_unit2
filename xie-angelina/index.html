@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nametag</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap">
+    <style>
+        :root {
+            --primary-color: #fff; 
+            --secondary-color: #ff69b4; 
+        }
+        
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: var(--primary-color);
+            overflow: hidden;
+        }
+        
+        .name {
+            display: flex;
+            gap: 5vw;
+            font-family: "Raleway", sans-serif;
+            font-variation-settings: "wght" 200;
+            font-size: 10vw;
+            text-transform: uppercase;
+            color: var(--secondary-color); 
+        }
+        
+        .letter {
+            transition: transform 0.3s ease, font-variation-settings 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .letter:hover {
+            transform: scale(1.2) rotate(-5deg);
+            font-variation-settings: "wght" 800;
+            color: #ff1493; 
+        }
+        
+        .letter:active {
+            transform: scale(0.8) rotate(5deg);
+            color: #c71585; 
+        }
+
+        @media (max-width: 900px) {
+            .name {
+                font-size: 15vw;
+                gap: 3vw;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .name {
+                font-size: 20vw;
+                gap: 2vw;
+            }
+        }
+        
+        @media (max-width: 450px) {
+            .name {
+                font-size: 25vw;
+                gap: 1vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">G</span>
+        <span class="letter">E</span>
+        <span class="letter">L</span>
+        <span class="letter">I</span>
+        <span class="letter">N</span>
+        <span class="letter">A</span>
+    </div>
+</body>
+</html>
