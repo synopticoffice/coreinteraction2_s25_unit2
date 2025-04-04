@@ -35,7 +35,7 @@
       font-variation-settings: 'wght' 700;
       font-size: 20vw;
       color: #ffffff;
-      transition: transform 0.3s ease, font-variation-settings 0.3s ease;
+      transition: transform 0.3s ease, font-variation-settings 0.3s ease, color 0.3s ease;
       cursor: pointer;
       user-select: none;
     }
@@ -78,17 +78,5 @@
     <span class="letter">N</span>
     <span class="letter">E</span>
   </div>
-
-  <script>
-    document.querySelectorAll('.letter').forEach(letter => {
-      letter.addEventListener('click', () => {
-        letter.style.transition = 'transform 0.1s ease, color 0.2s';
-        letter.style.transform = 'scale(1.3) rotate(360deg)';
-        setTimeout(() => {
-          letter.style.transform = '';
-        }, 200);
-      });
-    });
-  </script>
 </body>
 </html>
