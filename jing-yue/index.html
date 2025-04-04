@@ -1,12 +1,147 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jing-yue/index.css" />
+  <title>Yue Jing</title>
+
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrKSlprzqkWD-gVtU.woff2') format('woff2');
+      font-weight: 100 900;
+    }
+
+    body {
+      margin: 0;
+      padding: 10;
+      background-color: #f7faff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .name-tag {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .letter {
+      font-size: 8vw;
+      font-variation-settings: 'wght' 300;
+      color: #1e90ff;
+      cursor: pointer;
+      transition: transform 0.3s ease, font-variation-settings 0.3s ease;
+      user-select: none;
+    }
+
+    .letter:hover {
+      font-variation-settings: 'wght' 700;
+      transform: scale(2) rotate(-5deg);
+    }
+
+    .letter:active {
+      transform: scale(0.9) rotate(365deg);
+      color: #ff25af;
+    }
+
+    .dash-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dash {
+      font-size: 8vw;
+      font-variation-settings: 'wght' 300;
+      color: #ff00f7;
+      transition: opacity 0.3s ease;
+    }
+
+    .teresa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 0.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      background-color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+      transform: scale(1.5) rotate(-5deg);
+      padding: 10px;
+      text-align: center;
+      margin-left: 1px;
+    }
+
+    .dash-container:hover .dash {
+      opacity: 0;
+    }
+
+    .dash-container:hover .teresa {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .teresa span {
+      font-size: 8vw;
+      font-variation-settings: 'wght' 600;
+      color: #ff00ee;
+      transition: transform 0.3s ease;
   
-  </head>
-  <body>
-  
-  </body>
-  </html>
+
+    }
+
+    .teresa span:hover {
+      transform: scale(1.2) rotate(-5deg);
+    }
+
+    @media (max-width: 900px) {
+      .letter, .dash, .teresa span {
+        font-size: 10vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter, .dash, .teresa span {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter, .dash, .teresa span {
+        font-size: 16vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-tag">
+    <span class="letter">Y</span>
+    <span class="letter">U</span>
+    <span class="letter">E</span>
+    
+    <div class="dash-container">
+      <span class="dash letter">-</span>
+      <div class="teresa">
+        <span>T</span>
+        <span>E</span>
+        <span>R</span>
+        <span>E</span>
+        <span>S</span>
+        <span>A</span>
+      </div>
+    </div>
+
+    <span class="letter">J</span>
+    <span class="letter">I</span>
+    <span class="letter">N</span>
+    <span class="letter">G</span>
+  </div>
+</body>
+</html>
