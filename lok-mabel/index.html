@@ -19,10 +19,12 @@
       }
 
       body{
+        cursor: vertical-text;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -41,7 +43,15 @@
       }
       .mabel-m {
         font-family: 'swomp-sloppy';
+        display: inline-block;
+        position: relative;
+        transition: transform 2.5s ease, color 1s ease;
       }
+      .mabel-m:hover {
+        transform: rotate(1080deg) scale(1.5) translate(-5px, 0);
+        color: rgb(116, 0, 0);
+      }
+    
       .a{
         font-family: 'swomp-gappy';
         position: relative;
@@ -55,23 +65,47 @@
       }
       .b{
         font-family: 'swomp-sloppy';
-        position: relative;
-        cursor: pointer;
-        perspective: 1000px;
+        position:relative;
+        color: transparent;
       }
-      .b-inner {
-        font-family: 'swomp-gappy';
-        position: relative;
-        top: 0;
-        left: 0;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
+      .b span:nth-child(1){
+        position: absolute;
+        top:0; left:0; color: #000;
+        transition:0.5s;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+        overflow: hidden;
       }
-      .b:hover .b-inner{
-        color: rgb(138, 55, 138);
-        transform: rotateY(180deg);
+      b:hover span:nth-child(1){
+        transform:translateY(-30px); 
       }
-
+      .b span:nth-child(2){
+        position:absolute;
+        top:0; left:0; color: #000;
+        transition:0.8s;
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+        overflow:hidden;
+      }
+      .b:hover span:nth-child(2){
+        transform:translateY(30px); 
+      }
+      .b span:nth-child(3){
+        position:absolute;
+        top:50%; left: 0;
+        transform:translateY(-50%) scaleY(0);
+        width: 91%; color: #ffffff;
+        background:rgb(84, 2, 106);
+        font-family:monospace;
+        font-weight: bold;
+        font-size: 10px;
+        text-align:center;
+        margin-left: -5px;
+        padding: 10px 0px 10px 10px;
+        transition:0.8s;
+        border-radius: 1em;
+      }
+      .b:hover span:nth-child(3){
+        transform:translateY(0) scaleY(1);
+      }
       .e{
         font-family: 'swomp-gappy2';
         position: relative;
@@ -113,6 +147,139 @@
         75% {opacity: 0.8; transform: scale(1.01) translateY(-1px); }
         100% {opacity: 0.95; transform: scale(1) translateY(0); }
       }
+
+      @media screen and (max-width: 450px) {
+        #container {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .letter {
+          font-size: 120px;
+        }
+        .mabel-m {
+        font-family: 'swomp-sloppy';
+        display: inline-block;
+        position: relative;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+      }
+        .mabel-m:active {
+          transform: scale(1.2) rotate(5deg);
+          opacity: 0.8;
+      }
+
+      .a:active {
+        text-transform: lowercase;
+        transform: rotateY(720deg) scale(0.80);
+        color: blue;
+      }
+
+      .b:active span:nth-child(1){
+        transform:translateY(-30px); 
+      }
+
+      .b:active span:nth-child(2){
+        transform:translateY(30px); 
+      }
+
+      .b:active span:nth-child(3){
+        transform:translateY(0) scaleY(1);
+      }
+      .b span:nth-child(3){
+        position:absolute;
+        top:50%; left: 0;
+        transform:translateY(-50%) scaleY(0);
+        width: 100%; color: #ffffff;
+        background:rgb(84, 2, 106);
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 10px;
+        text-align:center;
+        margin-left: -5px;
+        padding: 10px 10px 10px 10px;
+        transition:0.8s;
+        border-radius: 1em;
+      }
+
+      .e:active {
+        transform: rotateX(360deg) scale(0.80);
+        color: rgb(255, 125, 164);
+      }
+
+      .l:active .flame-l {
+        opacity: 1;
+        transform: scale(1.1);
+        animation: flicker 3s infinite ease-in-out;
+      }
+    
+      }
+
+      @media screen and (max-width: 999px) and (min-width: 450px){
+        #container {
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .letter {
+          font-size: 200px;
+        }
+        .mabel-m {
+        font-family: 'swomp-sloppy';
+        display: inline-block;
+        position: relative;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+      }
+        .mabel-m:active {
+          transform: scale(1.2) rotate(5deg);
+          opacity: 0.8;
+      }
+
+      .a:active {
+        text-transform: lowercase;
+        transform: rotateY(720deg) scale(0.80);
+        color: blue;
+      }
+
+      .b:active span:nth-child(1){
+        transform:translateY(-30px); 
+      }
+
+      .b:active span:nth-child(2){
+        transform:translateY(30px); 
+      }
+
+      .b:active span:nth-child(3){
+        transform:translateY(0) scaleY(1);
+      }
+      .b span:nth-child(3){
+        position:absolute;
+        top:50%; left: 0;
+        transform:translateY(-50%) scaleY(0);
+        width: 100%; color: #ffffff;
+        background:rgb(84, 2, 106);
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 10px;
+        text-align:center;
+        margin-left: -5px;
+        padding: 10px 10px 10px 10px;
+        transition:0.8s;
+        border-radius: 1em;
+      }
+
+      .e:active {
+        transform: rotateX(360deg) scale(0.80);
+        color: rgb(255, 125, 164);
+      }
+
+      .l:active .flame-l {
+        opacity: 1;
+        transform: scale(1.1);
+        animation: flicker 3s infinite ease-in-out;
+      }
+      }
     </style>
   </head>
   <body>
@@ -124,12 +291,11 @@
         a
       </div>
       <div class="letter b">
-        <div class="letter b-inner">
-          B
-        </div>
         B
+        <span>B</span>
+        <span>B</span>
+        <span>HEYYY THAT'S ME!</span>
       </div>
-      
       <div class="letter e">
         E
       </div>
