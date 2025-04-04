@@ -1,12 +1,156 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tang Olivia Interactive</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght@-15..0,300..1000&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --morandi-1: #E3DCD2;
+      --morandi-2: #D9C9B0;
+      --morandi-3: #A8B8C7;
+      --morandi-4: #8C8278;
+      --morandi-5: #5C5A58;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      background-color: var(--morandi-1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5vw;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    .letter {
+      font-family: 'Recursive', sans-serif;
+      font-size: 12vw;
+      color: var(--morandi-5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+      opacity: 0;
+      transform: translateY(100px);
+      --weight: 400;
+      font-variation-settings: "wght" var(--weight), "slnt" 0;
+      animation: flyIn 0.8s ease-out forwards;
+    }
+
+    .letter:hover {
+      --weight: 700;
+      font-variation-settings: "wght" var(--weight), "slnt" -10;
+      transform: scale(1.15) rotate(-5deg);
+      color: var(--morandi-4);
+    }
+
+    .letter.clicked {
+      animation: bounce 0.5s ease;
+    }
+
+    @keyframes flyIn {
+      0% { opacity: 0; transform: translateY(100px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-30px); }
+      60% { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .subtitle {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: var(--morandi-4);
+      border-right: 2px solid var(--morandi-4);
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) 1s forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 30ch }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: var(--morandi-4); }
+    }
+
+    @media (max-width: 900px) {
+      .letter { font-size: 10vw; }
+    }
+
+    @media (max-width: 650px) {
+      .letter { font-size: 12vw; }
+    }
+
+    @media (max-width: 450px) {
+      .letter { font-size: 14vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="name" id="name">
+    <span class="letter">T</span>
+    <span class="letter">A</span>
+    <span class="letter">N</span>
+    <span class="letter">G</span>
+    <span class="letter">O</span>
+    <span class="letter">L</span>
+    <span class="letter">I</span>
+    <span class="letter">V</span>
+    <span class="letter">I</span>
+    <span class="letter">A</span>
+  </div>
+
+  <div class="subtitle">Hello, this is Tang Olivia 👋</div>
+
+  <script>
+    const letters = document.querySelectorAll(".letter");
+    const colors = ["#A8B8C7", "#D9C9B0", "#A69C92", "#8C8278", "#CEC8B6"];
+
+    letters.forEach((letter, i) => {
+      letter.style.animationDelay = `${i * 0.1}s`;
+
+      letter.addEventListener("click", () => {
+        letter.classList.add("clicked");
+        const originalColor = letter.style.color;
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        letter.style.color = randomColor;
+
+        setTimeout(() => {
+          letter.classList.remove("clicked");
+          letter.style.color = originalColor;
+        }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>
