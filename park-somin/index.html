@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Somin Park – Name Tag</title>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #ffa1a1;
+      color: #b46161;
+      font-family: 'Recursive', sans-serif;
+      overflow: hidden;
+    }
+
+    .name-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 1vw;
+    }
+
+    .letter {
+      font-variation-settings: "wght" 400, "CASL" 0.5;
+      font-size: 13vw;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .letter:hover {
+      font-variation-settings: "wght" 850, "CASL" 1;
+      transform: scale(1.2) rotate(-2deg);
+      color: #00ffe7;
+      text-shadow: 0 0 8px rgba(0, 255, 231, 0.6);
+    }
+
+    /* Responsive breakpoints */
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 16vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 20vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 25vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-container">
+    <div class="letter">S</div>
+    <div class="letter">O</div>
+    <div class="letter">M</div>
+    <div class="letter">I</div>
+    <div class="letter">N</div>
+    <div class="letter"> </div>
+    <div class="letter">P</div>
+    <div class="letter">A</div>
+    <div class="letter">R</div>
+    <div class="letter">K</div>
+  </div>
+
+  <script>
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach(letter => {
+      letter.addEventListener('click', () => {
+        letter.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
+

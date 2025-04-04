@@ -3,7 +3,94 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>JIAYI ZHANG</title>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Name Composition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght@-15..0,300..1000&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: radial-gradient(circle at center, #fdf6e3, #eee8d5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Recursive', sans-serif;
+    }
+
+    .name-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .letter {
+      font-variation-settings: 'wght' 600, 'slnt' 0;
+      font-size: 12vw;
+      margin: 0 0.2em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter:hover {
+      font-variation-settings: 'wght' 800, 'slnt' -10;
+      transform: scale(1.2) rotate(-2deg);
+      color: #b58900;
+    }
+
+    .letter.clicked {
+      font-variation-settings: 'wght' 300, 'slnt' 0;
+      transform: rotate(360deg) scale(1);
+      color: #cb4b16;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 900px) {
+      .letter { font-size: 10vw; }
+    }
+
+    @media (max-width: 650px) {
+      .letter { font-size: 14vw; }
+    }
+
+    @media (max-width: 450px) {
+      .letter { font-size: 18vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="name-container" id="name">
+    <span class="letter">J</span>
+    <span class="letter">I</span>
+    <span class="letter">A</span>
+    <span class="letter">Y</span>
+    <span class="letter">I</span>
+  </div>
+
+  <script>
+    document.querySelectorAll('.letter').forEach(letter => {
+      letter.addEventListener('click', () => {
+        letter.classList.toggle('clicked');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
   
   </head>
   <body>

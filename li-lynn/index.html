@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Li Lynn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: 'Kumar One', cursive;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    .name-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
+
+    .letter {
+      font-size: 10vw;
+      text-decoration: none;
+      color: black;
+      transition: transform 0.3s;
+    }
+
+    .letter:hover {
+      transform: scale(1.2);
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    #section-l {
+      background-color: #FFD700;
+    }
+
+    #section-y {
+      background-color: #FF4C4C;
+    }
+
+    #section-n1 {
+      background-color: #4CAF50;
+    }
+
+    #section-n2 {
+      background-color: #9C27B0;
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 18vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="name-container">
+    <a href="#section-l" class="letter">L</a>
+    <a href="#section-y" class="letter">y</a>
+    <a href="#section-n1" class="letter">n</a>
+    <a href="#section-n2" class="letter">n</a>
+  </div>
+
+  <div id="section-l" class="section">L</div>
+  <div id="section-y" class="section">y</div>
+  <div id="section-n1" class="section">n</div>
+  <div id="section-n2" class="section">n</div>
+
+</body>
+
+</html>

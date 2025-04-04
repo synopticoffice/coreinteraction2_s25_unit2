@@ -3,10 +3,35 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+      <title>Gabriella Riccobono</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Modak&family=Rubik+Puddles&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Modak&family=Rammetto+One&family=Rubik+Puddles&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="rammetto-one-regular">
+  <!-- Confetti container - now placed BEFORE the letters in the DOM order -->
+  <div class="confetti-container"></div>
   
+  <!-- Creative border -->
+  <div class="border-container">
+    <div class="border-left"></div>
+    <div class="border-right"></div>
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+  </div>
+  
+  <!-- Name container - now with higher z-index -->
+  <div class="name-container">
+    <div class="letter g" onclick="createConfetti(this)">G</div>
+    <div class="letter a" onclick="createConfetti(this)">A</div>
+    <div class="letter b" onclick="createConfetti(this)">B</div>
+    <div class="letter y" onclick="createConfetti(this)">Y</div>
+  </div>
   </body>
+  <script src="script.js"></script>
   </html>
