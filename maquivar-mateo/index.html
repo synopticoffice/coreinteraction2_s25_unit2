@@ -1,115 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mateo Maquivar Composition</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring 2025 Core 2 Interaction: Unit 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        
+        .controls {
+            font-family: arial;
+            font-size: 0.95em;
+            line-height: 2em;
+            padding: 1.25em;
+            background-color: #fff;
+            border-bottom: 1px #CCCCCC solid;
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-  <style>
+            display: grid;
+            grid-template-columns: repeat(3, 15%);
+            justify-content: space-between;
+        }
+        
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #111; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Cinzel', serif;
-      color: #fff;
-    }
-    
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0; 
+            width: 100%;
+        }
+        
+        .grid-item {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        
+        .grid-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-    h1 {
-      position: relative;
-      font-size: 8vw;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transition: transform 0.2s ease;
-    }
-    
-  
-    body:hover h1 {
-      transition: transform 0.1s ease-out;
-    }
-    
+        .grid-item .studentname {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            font-size: 0.95em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 0.2em 0.3em;
+            z-index: 100;
+        }
 
-    h1::before,
-    h1::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.8;
-      overflow: hidden;
-    }
-    h1::before {
-      left: 2px;
-      text-shadow: -2px 0 red;
-      animation: glitchBefore 2s infinite linear alternate-reverse;
-    }
-    h1::after {
-      left: -2px;
-      text-shadow: -2px 0 blue;
-      animation: glitchAfter 2s infinite linear alternate-reverse;
-    }
-    
-
-    @keyframes glitchBefore {
-      0% { clip: rect(10px, 9999px, 15px, 0); }
-      50% { clip: rect(90px, 9999px, 100px, 0); }
-      100% { clip: rect(10px, 9999px, 15px, 0); }
-    }
-    @keyframes glitchAfter {
-      0% { clip: rect(20px, 9999px, 25px, 0); }
-      50% { clip: rect(70px, 9999px, 80px, 0); }
-      100% { clip: rect(20px, 9999px, 25px, 0); }
-    }
-    
-
-    h1:hover {
-      animation: glitch 0.3s infinite;
-      filter: url(#pixelate);
-    }
-    @keyframes glitch {
-      0%   { transform: translate(0, 0); }
-      20%  { transform: translate(-2px, 2px) skew(1deg, 1deg); }
-      40%  { transform: translate(2px, -2px) skew(-1deg, -1deg); }
-      60%  { transform: translate(-2px, -2px) skew(1deg, -1deg); }
-      80%  { transform: translate(2px, 2px) skew(-1deg, 1deg); }
-      100% { transform: translate(0, 0); }
-    }
-  </style>
+        .hidden {
+            display: none;
+        }
+        
+        .toggle-btn {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 0.3em 0.6em;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: arial;
+            font-size: 0.95em;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
 </head>
 <body>
+    <div class="controls">
+        <label for="columnSlider">Core Interaction 2: Unit 2</label>
+        <input type="range" id="columnSlider" min="1" max="10" value="3">
+        <button id="toggleNames" class="toggle-btn">Hide Names</button>
+    </div>
+    
+    <div class="grid-container">
+        <div class="grid-item"><div class="studentname">Student, Test</div><iframe src="student-test/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Adepetu, Fari</div><iframe src="adepetu-fari/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Agarwal, Tanvi</div><iframe src="agarwal-tanvi/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Agrawal, Kavya</div><iframe src="agrawal-kavya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Alanzi, Hassan</div><iframe src="alanzi-hassan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Alturaifi, Norah</div><iframe src="alturaifi-norah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Amron, Betty</div><iframe src="amron-betty/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Angel, Zoe</div><iframe src="angel-zoe/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ao, Angelina</div><iframe src="ao-angelina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Babel, Shreya</div><iframe src="babel-shreya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Behar, Alexia</div><iframe src="behar-alexia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Bhatia, Ishika</div><iframe src="bhatia-ishika/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Blum, Amira</div><iframe src="blum-amira/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Bonavita, Helena</div><iframe src="bonavita-helena/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Callaghan, Reilly</div><iframe src="callaghan-reilly/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chang, Justine</div><iframe src="chang-justine/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chang, Sarah</div><iframe src="chang-sarah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chatterjee, Antara</div><iframe src="chatterjee-antara/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Ariel</div><iframe src="chen-ariel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Fiona</div><iframe src="chen-fiona/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Michelle</div><iframe src="chen-michelle/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Sandy</div><iframe src="chen-sandy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Sixing</div><iframe src="chen-sixing/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Sonia</div><iframe src="chen-sonia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chen, Wei Ki</div><iframe src="chen-wei-ki/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Choi, Hazel</div><iframe src="choi-hazel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chong, Rachel</div><iframe src="chong-rachel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Choo, Elle</div><iframe src="choo-elle/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Choung, Christine</div><iframe src="choung-christine/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Chung, Jiyun</div><iframe src="chung-jiyun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Clark, Mi'Lah</div><iframe src="clark-mi-lah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Custodio, Jake</div><iframe src="custodio-jake/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Dai, Carina</div><iframe src="dai-carina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Daniel Jung</div><iframe src="daniel-jung/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Danish, Alinah</div><iframe src="danish-alinah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Denzau, Nisha</div><iframe src="denzau-nisha/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Dhiman, Diya</div><iframe src="dhiman-diya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Diaz, Jackson</div><iframe src="diaz-jackson/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Downing, Temperance</div><iframe src="downing-temperance/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Du, Lucy</div><iframe src="du-lucy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Du, Sombra</div><iframe src="du-sombra/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Duan, Feiran</div><iframe src="duan-feiran/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Dugauguez, Constance</div><iframe src="dugauguez-constance/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Finger, Zoe</div><iframe src="finger-zoe/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Gandhi, Aditya</div><iframe src="gandhi-aditya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Gardner, Deklyn</div><iframe src="gardner-deklyn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Grant, Sara</div><iframe src="grant-sara/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Gregory, Nicolle</div><iframe src="gregory-nicolle/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Guo, Junhan</div><iframe src="guo-junhan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Gupta, Sueksha</div><iframe src="gupta-sueksha/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Haan, Sora</div><iframe src="haan-sora/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Han, Gyeong Su</div><iframe src="han-gyeong-su/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Herring, Benjamin</div><iframe src="herring-benjamin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Herskowitz, Katie</div><iframe src="herskowitz-katie/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hoffmeister, April</div><iframe src="hoffmeister-april/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hsu, Yikaan Lucas</div><iframe src="hsu-yikaan-lucas/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hu, Qingrou</div><iframe src="hu-qingrou/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hu, Yaning</div><iframe src="hu-yaning/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Huang, Serena</div><iframe src="huang-serena/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hutabarat, Isabella</div><iframe src="hutabarat-isabella/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Hwang, Jane</div><iframe src="hwang-jane/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ilunga, Danielle</div><iframe src="ilunga-danielle/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Im, Ivy</div><iframe src="im-ivy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ip, Charlotte</div><iframe src="ip-charlotte/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Iyer, Sushmita</div><iframe src="iyer-sushmita/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Jiang, Sammi</div><iframe src="jiang-sammi/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Jing, Yue</div><iframe src="jing-yue/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Joung, Daeun</div><iframe src="joung-daeun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Jung, Ellina</div><iframe src="jung-ellina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Jung, Jaeyoung</div><iframe src="jung-jaeyoung/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Jung, SungMin</div><iframe src="jung-sungmin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kang, Thomas</div><iframe src="kang-thomas/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kang, Yisu</div><iframe src="kang-yisu/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kapadia, Keyaa</div><iframe src="kapadia-keyaa/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Khemka, Sharanya</div><iframe src="khemka-sharanya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kim, Abby</div><iframe src="kim-abby/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kim, Chara</div><iframe src="kim-chara/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kim, Hajin</div><iframe src="kim-hajin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kim, Melly</div><iframe src="kim-melly/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Koo, Christina</div><iframe src="koo-christina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Kuo, Savanna</div><iframe src="kuo-savanna/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ladao, Jeremiah</div><iframe src="ladao-jeremiah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lam, Olivia</div><iframe src="lam-olivia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, David</div><iframe src="lee-david/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, Ella</div><iframe src="lee-ella/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, Jade</div><iframe src="lee-jade/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, Jihyun</div><iframe src="lee-jihyun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, Myungwon</div><iframe src="lee-myungwon/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lee, Queena</div><iframe src="lee-queena/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Li, Eva</div><iframe src="li-eva/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Li, Kevin</div><iframe src="li-kevin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Li, Kiara</div><iframe src="li-kiara/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Li, Lynn</div><iframe src="li-lynn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Li, Mark</div><iframe src="li-mark/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lin, Celeste</div><iframe src="lin-celeste/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lin, Melody</div><iframe src="lin-melody/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Liu, Alex</div><iframe src="liu-alex/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Liu, Ammie</div><iframe src="liu-ammie/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Liu, Suzy</div><iframe src="liu-suzy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lok, Mabel</div><iframe src="lok-mabel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Loza, Veronica</div><iframe src="loza-veronica/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Lu, Donglai</div><iframe src="lu-donglai/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Luanguthai, Tn</div><iframe src="luanguthai-tn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Maquivar, Mateo</div><iframe src="maquivar-mateo/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Marquez, Blossom</div><iframe src="marquez-blossom/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">McKelvey, Taylor</div><iframe src="mckelvey-taylor/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Mody, Netra</div><iframe src="mody-netra/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Montgomery, Morissey</div><iframe src="montgomery-morissey/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Moon, Hyeonwoo</div><iframe src="moon-hyeonwoo/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Mukherjee, Suhani</div><iframe src="mukherjee-suhani/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Mundhra, Priyamvada</div><iframe src="mundhra-priyamvada/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Nam, Gahyun</div><iframe src="nam-gahyun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Oh, Reika</div><iframe src="oh-reika/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ormond, Sophia</div><iframe src="ormond-sophia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pahng, Joanne</div><iframe src="pahng-joanne/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pak, Joanna</div><iframe src="pak-joanna/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pak, Sarah</div><iframe src="pak-sarah/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pang, Yuhan</div><iframe src="pang-yuhan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pao, Charis</div><iframe src="pao-charis/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Park, Somin</div><iframe src="park-somin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Park, Soohyun</div><iframe src="park-soohyun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Parker, Jonas</div><iframe src="parker-jonas/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Perez, Joselyn</div><iframe src="perez-joselyn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pham, Hien Thuc</div><iframe src="pham-hien-thuc/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Phan, Khanh</div><iframe src="phan-khanh/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Pitkin, Autumn</div><iframe src="pitkin-autumn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Riccobono, Gabriella</div><iframe src="riccobono-gabriella/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Rodriguez, Jason</div><iframe src="rodriguez-jason/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Romanova, Aina</div><iframe src="romanova-aina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Romero Godoy, Maria</div><iframe src="romero-godoy-maria/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Schreier, Julia</div><iframe src="schreier-julia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Schulman, Eden</div><iframe src="schulman-eden/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Seo, Yoojeong</div><iframe src="seo-yoojeong/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Seo, Yujin</div><iframe src="seo-yujin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Shah, Krishna</div><iframe src="shah-krishna/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Shaw, Tanisha</div><iframe src="shaw-tanisha/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Sheng, Linda</div><iframe src="sheng-linda/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Shu, Justin</div><iframe src="shu-justin/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Singh, Babika</div><iframe src="singh-babika/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Singhania, Tarini</div><iframe src="singhania-tarini/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Siu, Megan</div><iframe src="siu-megan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Slater, Olivia</div><iframe src="slater-olivia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Son, Evon</div><iframe src="son-evon/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Son, Janice</div><iframe src="son-janice/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Soni, Ishaana Isabella</div><iframe src="soni-ishaana-isabella/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Strange, Sophia</div><iframe src="strange-sophia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Subramani, Gauri</div><iframe src="subramani-gauri/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Suk, Yulan</div><iframe src="suk-yulan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Sun, Simona</div><iframe src="sun-simona/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Syu, Josephine</div><iframe src="syu-josephine/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Tang, Olivia</div><iframe src="tang-olivia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Tenesaca, Gabriel</div><iframe src="tenesaca-gabriel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Thongkukiatkul, Nasongphorn</div><iframe src="thongkukiatkul-nasongphorn/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Timor, Guy</div><iframe src="timor-guy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ugural, Leyla</div><iframe src="ugural-leyla/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">van Tilburg, Annet</div><iframe src="van-tilburg-annet/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Vita, Rachel</div><iframe src="vita-rachel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wang, Lucy</div><iframe src="wang-lucy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wang, Minnie</div><iframe src="wang-minnie/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wang, Wendy</div><iframe src="wang-wendy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wang, Yunshu</div><iframe src="wang-yunshu/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wei, Lucy</div><iframe src="wei-lucy/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wei, Zhenyu</div><iframe src="wei-zhenyu/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Widjajanto Puspawidjaja, Steffi</div><iframe src="widjajanto-puspawidjaja-steffi/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Wood, Kendall</div><iframe src="wood-kendall/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Xiao, Michael</div><iframe src="xiao-michael/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Xie, Angelina</div><iframe src="xie-angelina/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Xu, Blanchett</div><iframe src="xu-blanchett/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Xue, Yinan</div><iframe src="xue-yinan/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yamazaki, Miu</div><iframe src="yamazaki-miu/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yan, Rachel</div><iframe src="yan-rachel/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yang, Arya</div><iframe src="yang-arya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yang, Cecilia</div><iframe src="yang-cecilia/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Ye, Maya</div><iframe src="ye-maya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yeung, Julie</div><iframe src="yeung-julie/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yu, Jiwon</div><iframe src="yu-jiwon/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yu, Serena</div><iframe src="yu-serena/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yun, Seok Hun</div><iframe src="yun-seok-hun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Yurdakok, Iclal</div><iframe src="yurdakok-iclal/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Zaytseva, Alesya</div><iframe src="zaytseva-alesya/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Zhang, Jiayi</div><iframe src="zhang-jiayi/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Zhao, Youran</div><iframe src="zhao-youran/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Zheng, Kun</div><iframe src="zheng-kun/index.html"></iframe></div>
+        <div class="grid-item"><div class="studentname">Zhumagaliyeva, Aiya</div><iframe src="zhumagaliyeva-aiya/index.html"></iframe></div>
+    </div>
+    
+    <script>
+        const slider = document.getElementById('columnSlider');
+        const gridContainer = document.querySelector('.grid-container');
+        const toggleButton = document.getElementById('toggleNames');
+        const studentNames = document.querySelectorAll('.studentname');
+        
+        // Update grid columns when slider value changes
+        slider.addEventListener('input', function() {
+            const columns = this.value;
+            gridContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+        });
 
-  <h1 data-text="Mateo Maquivar">Mateo Maquivar</h1>
-  
-
-  <script>
-    document.addEventListener('mousemove', (e) => {
-      const { innerWidth, innerHeight } = window;
-      const x = (e.clientX / innerWidth - 0.5) * 20;
-      const y = (e.clientY / innerHeight - 0.5) * 20;
-      const title = document.querySelector('h1');
-      title.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  </script>
-  
-
-  <svg style="display: none;">
-    <filter id="pixelate">
-      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" result="turbulence"/>
-      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-  </svg>
+        // Toggle visibility of student names
+        let namesVisible = true;
+        toggleButton.addEventListener('click', function() {
+            studentNames.forEach(name => {
+                name.classList.toggle('hidden');
+            });
+            
+            namesVisible = !namesVisible;
+            toggleButton.textContent = namesVisible ? 'Hide Names' : 'Show Names';
+        });
+    </script>
 </body>
 </html>
-
