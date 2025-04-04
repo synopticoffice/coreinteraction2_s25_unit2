@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f0ff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.6s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.letter {
+    font-size: 20vmin;
+    font-weight: 800;
+    color: #ff69b4;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-variation-settings: 'wght' 800;
+}
+
+
+.l {
+    color: #ff69b4;
+    transform: rotate(-5deg);
+}
+
+.e {
+    color: #ff69b4;
+    transform: translateY(-5%);
+}
+
+.y {
+    color: #ff69b4;
+    transform: translateY(5%) rotate(5deg);
+}
+
+.l2 {
+    color: #ff69b4;
+    transform: translateY(-8%) rotate(-3deg);
+}
+
+.a {
+    color: #ff69b4;
+    transform: rotate(5deg);
+}
+
+
+
+.letter:hover {
+    transform: scale(1.2) translateY(-10px);
+    color: #ff1a7c;
+    text-shadow: 
+        0 0 10px #ff69b4,
+        0 0 20px #ff69b4,
+        0 0 30px #ff69b4,
+        0 0 40px #ff69b4;
+    font-variation-settings: 'wght' 900;
+    z-index: 10;
+}
+
+
+
+.letter:active::before,
+.letter:active::after {
+    content: '*';
+    position: absolute;
+    font-size: 2rem;
+    color: #ff1a7c;
+    pointer-events: none;
+}
+
+.letter:active::before {
+    animation: sparkle-right 0.5s ease forwards;
+}
+
+.letter:active::after {
+    animation: sparkle-left 0.5s ease forwards;
+}
+
+
+@keyframes sparkle-right {
+    0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+    50% { transform: translate(30px, -30px) scale(2); opacity: 1; }
+    100% { transform: translate(50px, -50px) scale(0.5); opacity: 0; }
+}
+
+@keyframes sparkle-left {
+    0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+    50% { transform: translate(-30px, -30px) scale(2); opacity: 1; }
+    100% { transform: translate(-50px, -50px) scale(0.5); opacity: 0; }
+}
+
+
+@media (max-width: 900px) {
+    .letter {
+        font-size: 18vmin;
+    }
+}
+    
+    .letter {
+        font-size: 20vmin;
+        margin: -20px 0;
+    }
+
+@media (max-width: 450px) {
+    .letter {
+        font-size: 22vmin;
+        margin: -25px 0;
+    }
+}
