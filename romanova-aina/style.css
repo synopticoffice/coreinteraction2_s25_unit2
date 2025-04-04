@@ -1,0 +1,104 @@
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+body {
+    font-family: "Libre Baskerville", serif;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(https://admin.sportshackster.com/WallPaperMedia/PlayerWallPaperImage/cinna-5_63861322477144.jpg);
+    background-color: rgb(244, 244, 244);
+}
+
+p {
+    font-weight: 700;
+    font-size: 400px;
+    color: rgb(240, 0, 50);
+    transition-duration: 2s;
+    padding: 10px;
+}
+
+p:active {
+    text-transform: lowercase;
+}
+
+div {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    margin-top: -20em;
+}
+
+#one {
+    margin-right: 0.05em;
+}
+
+#one:hover{
+    color: pink;
+}
+
+#two:active {
+    font-weight: 100;
+}
+
+#two:hover{
+    color: rgb(75, 0, 250);
+}
+
+
+#three {
+    margin-right: -0.05em;
+}
+
+#three:hover {
+    color: yellow;
+}
+
+#four:hover {
+    color: green;
+}
+
+@media screen and (min-width: 450px){
+    p{
+        font-size: 100px;
+    }
+    div {
+        margin-top: 5em;
+    }
+
+    #one, #three {
+    }
+}
+@media screen and (min-width: 650px){
+    p{
+        font-size: 150px;
+    }
+    div {
+        margin-top: 3em;
+    }
+}
+@media screen and (min-width: 900px){
+    p{
+        font-size: 250px;
+    }
+    div {
+        margin-top: -10em;
+    }
+    
+}
