@@ -1,12 +1,115 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateo Maquivar Composition</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #111; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Cinzel', serif;
+      color: #fff;
+    }
+    
+
+    h1 {
+      position: relative;
+      font-size: 8vw;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: transform 0.2s ease;
+    }
+    
   
-  </head>
-  <body>
+    body:hover h1 {
+      transition: transform 0.1s ease-out;
+    }
+    
+
+    h1::before,
+    h1::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+      overflow: hidden;
+    }
+    h1::before {
+      left: 2px;
+      text-shadow: -2px 0 red;
+      animation: glitchBefore 2s infinite linear alternate-reverse;
+    }
+    h1::after {
+      left: -2px;
+      text-shadow: -2px 0 blue;
+      animation: glitchAfter 2s infinite linear alternate-reverse;
+    }
+    
+
+    @keyframes glitchBefore {
+      0% { clip: rect(10px, 9999px, 15px, 0); }
+      50% { clip: rect(90px, 9999px, 100px, 0); }
+      100% { clip: rect(10px, 9999px, 15px, 0); }
+    }
+    @keyframes glitchAfter {
+      0% { clip: rect(20px, 9999px, 25px, 0); }
+      50% { clip: rect(70px, 9999px, 80px, 0); }
+      100% { clip: rect(20px, 9999px, 25px, 0); }
+    }
+    
+
+    h1:hover {
+      animation: glitch 0.3s infinite;
+      filter: url(#pixelate);
+    }
+    @keyframes glitch {
+      0%   { transform: translate(0, 0); }
+      20%  { transform: translate(-2px, 2px) skew(1deg, 1deg); }
+      40%  { transform: translate(2px, -2px) skew(-1deg, -1deg); }
+      60%  { transform: translate(-2px, -2px) skew(1deg, -1deg); }
+      80%  { transform: translate(2px, 2px) skew(-1deg, 1deg); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 data-text="Mateo Maquivar">Mateo Maquivar</h1>
   
-  </body>
-  </html>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX / innerWidth - 0.5) * 20;
+      const y = (e.clientY / innerHeight - 0.5) * 20;
+      const title = document.querySelector('h1');
+      title.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+  
+
+  <svg style="display: none;">
+    <filter id="pixelate">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" result="turbulence"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+</body>
+</html>
+
