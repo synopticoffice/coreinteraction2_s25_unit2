@@ -1,12 +1,187 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with iframes</title>
+    <link rel="stylesheet" href="https://use.typekit.net/svq7ztr.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        body {
+            display: grid;
+            box-sizing: border-box;
+            place-items: center;
+            height: 100vh;
+
+            font-family: "sway-variable",sans-serif;
+            font-variation-settings: 'CNST' 300, 'wght' 500;
+
+            padding: 4rem;
+            background: rgb(255,196,222);
+            background: radial-gradient(circle, rgba(255,196,222,1) 0%, rgba(174,148,233,1) 100%);
+
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .letter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24rem;
+            mix-blend-mode: overlay;
+        }
+
+        #R {
+            color: #000000;
+            transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #R:hover {
+            scale: 1.25;
+            filter: blur(20px);
+
+        }
+
+        #R:active{
+          animation: colorchange 3s infinite;
+        }
+
+        @keyframes colorchange {
+
+            0% {
+                color: red;
+            }
+            25% {
+                color: yellow;
+            }
+            50% {
+                color: green;
+            }
+            75% {
+                color: blue;
+
+            }
+        }
+
+        #A {
+            color: #000000;
+            transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        #A:hover {
+            font-variation-settings: "wght" 900, "CNST" 100;
+        }
+
+        #A:active {
+          animation: colorchange 3s infinite;
+        }
+
+        #C {
+
+            color: #000000;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #C:hover {
+          font-variation-settings: "wght" 200, "CNST" 10;
+        }
+
+        #C:active {
+          animation: colorchange 3s infinite;
+
+        }
+
+        #H {
+            color: #000000;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #H:hover {
+          font-variation-settings: "wght" 200, "CNST" 10;
+        }
+
+        #H:active {
+          animation: colorchange 3s infinite;
+        }
+
+        #E {
+            color: #000000;
+            transition: all ease-in-out 0.2s;
+        }
+
+        #E:active {
+          animation: colorchange 3s infinite;
+        }
+
+        #E:hover {
+          font-variation-settings: "wght" 900, "CNST" 100;
+        }
+
+        #L {
+            color: #000000;
+        }
+
+        #L:hover {
+            scale: 1.25;
+            filter: blur(20px);
+            transition: all ease-in-out 0.2s;
+        }
+
+        #L:active {
+          animation: colorchange 3s infinite;
+        }
+
+        @media screen and (max-width: 900px) {
+            .letter {
+                font-size: 10rem;
+            }
+        }
+        
+        @media screen and (max-width: 650px) {
+            .letter {
+                font-size: 5rem;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .letter {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="letter" id="R">
+            r
+        </div>
+        <div class="letter" id="A">
+            a
+        </div>
+        <div class="letter" id="C">
+            c
+        </div>
+        <div class="letter" id="H">
+            h
+        </div>
+        <div class="letter" id="E">
+            e
+        </div>
+        <div class="letter" id="L">
+            l
+        </div>
+    </div>
+
+</body>
+</html>
