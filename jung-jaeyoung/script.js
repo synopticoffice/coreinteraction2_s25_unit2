@@ -8,15 +8,15 @@ letters.forEach(letter => {
 
   letter.addEventListener('mouseout', () => {
     letter.style.transform = 'scale(1) rotate(0deg)';
-    letter.style.color = '#000';
+    letter.style.color = '#6A0DAD';
   });
 
   letter.addEventListener('click', () => {
     letter.style.transform = 'scale(1.4) rotate(-10deg)';
-    letter.style.color = '#FF4500';
+    letter.style.color = '#FFD700';
     setTimeout(() => {
       letter.style.transform = 'scale(1) rotate(0deg)';
-      letter.style.color = '#000';
+      letter.style.color = '#6A0DAD';
     }, 500);
   });
 });
