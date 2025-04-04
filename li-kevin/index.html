@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Li</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "bellota", sans-serif;
+      }
+
+      .letter {
+        font-size: 10vw;
+        transition: all 0.3s ease;
+        display: inline-block;
+        cursor: pointer;
+        user-select: none;
+        margin: 0.2em;
+        color: white
+      }
+
+      .name {
+        width: 100vw;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .letter:hover {
+        font-variation-settings: "wght" 700;
+        transform: scale(1.2) rotate(365deg);
+        color: lightskyblue;
+      }
+
+      .letter:active {
+        font-variation-settings: "wght" 900;
+        transform: scale(1.4) rotate(-5deg);
+        color: black;
+      }
+
+      /* Breakpoints */
+      @media screen and (max-width: 900px) {
+        div {
+            font-size: 15em;
+        }
+    }
+    
+    @media screen and (max-width: 650px) {
+        div {
+            font-size: 10em;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        div {
+            font-size: 5em;
+        }
+    }
+    </style>
   </head>
   <body>
-  
+    <div class="name">
+      <div class="letter">K</div>
+      <div class="letter">e</div>
+      <div class="letter">v</div>
+      <div class="letter">i</div>
+      <div class="letter">n</div>
+      <div class="letter">&nbsp;</div>
+      <div class="letter">L</div>
+      <div class="letter">i</div>
+
+    </div>
   </body>
-  </html>
+</html>
