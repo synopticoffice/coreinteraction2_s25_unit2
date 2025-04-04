@@ -1,12 +1,131 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ellina</title>
+  <link rel="stylesheet" href="https://use.typekit.net/pdo2zss.css">
+  <style>
+    body {
+      background: beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: "firelli-variable", sans-serif;
+      font-variation-settings: "wght" 100;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: rgb(157, 46, 46);
+    }
+
+    .letter {
+      font-size: 10vw;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.2s ease;
+      font-variation-settings: "wght" 100, "CASL" 0.5;
+      animation: wiggle 2s ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+
+    @keyframes wiggle {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(3deg);
+      }
+
+      75% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    .letter:hover {
+      color: #ff00f7;
+      transform: scale(1.2) rotate(-10deg);
+      font-variation-settings: "wght" 500, "CASL" 1;
+      -webkit-text-stroke: 10px rgb(238, 255, 0);
+      paint-order: stroke;
+      animation: wiggle 2s ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+      display: inline-block;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .copy {
+      position: absolute;
+      -webkit-text-stroke: 15px rgb(172, 236, 235);
+    }
+
+    .copy2 {
+      position: absolute;
+      -webkit-text-stroke: 30px rgb(207, 239, 205);
+    }
+
+    h1 {
+      line-height: 55px;
+      letter-spacing: -10px;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="name">
+      <h1 class="copy2">
+        <span class="letter" style="--delay: 0s">E</span>
+        <span class="letter" style="--delay: 0.2s">L</span>
+        <span class="letter" style="--delay: 0.3s">L</span><br>
+        <span class="letter" style="--delay: 0.4s">I</span>
+        <span class="letter" style="--delay: 0.5s">N</span>
+        <span class="letter" style="--delay: 0.6s">A</span><br>
+        <span class="letter" style="--delay: 0.7s">A</span>
+        <span class="letter" style="--delay: 0.8s">A</span>
+        <span class="letter" style="--delay: 0.9s">A</span>
+        <span class="letter" style="--delay: 0.9s">!</span>
+      </h1>
+      <h1 class="copy">
+        <span class="letter" style="--delay: 0s">E</span>
+        <span class="letter" style="--delay: 0.2s">L</span>
+        <span class="letter" style="--delay: 0.3s">L</span><br>
+        <span class="letter" style="--delay: 0.4s">I</span>
+        <span class="letter" style="--delay: 0.5s">N</span>
+        <span class="letter" style="--delay: 0.6s">A</span><br>
+        <span class="letter" style="--delay: 0.7s">A</span>
+        <span class="letter" style="--delay: 0.8s">A</span>
+        <span class="letter" style="--delay: 0.9s">A</span>
+        <span class="letter" style="--delay: 0.9s">!</span>
+      </h1>
+      <h1>
+        <span class="letter" style="--delay: 0s">E</span>
+        <span class="letter" style="--delay: 0.2s">L</span>
+        <span class="letter" style="--delay: 0.3s">L</span><br>
+        <span class="letter" style="--delay: 0.4s">I</span>
+        <span class="letter" style="--delay: 0.5s">N</span>
+        <span class="letter" style="--delay: 0.6s">A</span><br>
+        <span class="letter" style="--delay: 0.7s">A</span>
+        <span class="letter" style="--delay: 0.8s">A</span>
+        <span class="letter" style="--delay: 0.9s">A</span>
+        <span class="letter" style="--delay: 0.9s">!</span>
+      </h1>
+    </div>
+  </div>
+</body>
+
+</html>
