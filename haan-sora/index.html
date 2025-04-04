@@ -3,10 +3,133 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Sora Haan</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   
   </head>
+
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .envelope{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100vh;
+
+      background-color: black;
+
+      color: white;
+    }
+
+    #S{
+      font-family: "Playfair Display", serif;
+      font-size: 20em;
+      font-weight: 600;
+
+      transition: all .5s ease-in-out;
+    }
+    #S:hover{
+      font-weight: 900; 
+      transition: all .5s ease-in-out;
+
+      cursor: pointer;
+    }
+
+    #O{
+      font-family: "Playfair Display", serif;
+      font-size: 20em;
+      font-weight: 600;
+    }
+    #O:hover{
+      font-style: italic;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    #R{
+      font-family: "Playfair Display", serif;
+      font-size: 20em;
+      font-weight: 600;
+
+      transition: all .5s ease-in-out;
+    }
+    #R:hover{
+      color:aqua;
+      font-weight:700;
+      transition: all .5s ease-in-out;
+      cursor: pointer;
+    }
+
+    #A{
+      font-family: "Playfair Display", serif;
+      font-size: 20em;
+      font-weight: 600;
+    }
+    #A:hover{
+      text-transform: lowercase;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      #S{
+        font-size: 10em;
+      }
+      #O{
+        font-size: 10em;
+      }
+      #R{
+        font-size: 10em;
+      }
+      #A{
+        font-size: 10em;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      #S{
+        font-size: 5em;
+      }
+      #O{
+        font-size: 5em;
+      }
+      #R{
+        font-size: 5em;
+      }
+      #A{
+        font-size: 5em;
+      }
+    }
+
+    @media only screen and (max-width: 200px) {
+      #S{
+        font-size: 2em;
+      }
+      #O{
+        font-size: 2em;
+      }
+      #R{
+        font-size: 2em;
+      }
+      #A{
+        font-size: 2em;
+      }
+    }
+  </style>
+
   <body>
+    <div class="envelope">
+      <span id="S">S</span><span id="O">O</span><span id="R">R</span><span id="A">A</span>
+    </div>
   
   </body>
   </html>
