@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+        
+}
+
+.name{
+    color: rgb(72, 255, 0);
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 50%;
+    font-size: 20rem;
+    margin: 0 auto;
+    margin-top: 15rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 100;
+}
+
+.a:hover{
+    font-weight: 900;
+    transition: all ease-in-out 1s;
+}
+
+.p:hover{
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    font-weight: 900;
+}   
+
+.r:hover{
+    animation-name: spin; 
+    animation-duration: 1.5s;
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+    background-color: transparent;
+
+}
+@keyframes spin { /* This name can be anything */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* One full rotation */
+    }
+}
+
+.i:hover{
+    cursor: pointer;
+}
+.i:active{
+    scale: 1.5;
+    font-weight: 900;
+    transition: all ease-in-out 1s;
+}
+
+.l:hover{
+    content: url(tom.png);
+}
