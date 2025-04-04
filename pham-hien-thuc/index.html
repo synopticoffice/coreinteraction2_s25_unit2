@@ -4,9 +4,144 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Your Name Here</title>
+      <style>
+        @font-face {
+           font-family: ABC;
+           src: url(ABCConnect-Flat-Trial.otf);
+        }
+
+        @font-face {
+           font-family: Anthony;
+           src: url(Anthony.otf);
+        }
+
+        @font-face {
+           font-family: Hikaru;
+           src: url(HIKARUMONO-Regular.otf);
+        }
+        
+        
+        body {
+          background: url(bg.jpg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            margin: 0;
+        }
+
+        .floating-text {
+            position: absolute;
+            font-family: Anthony;
+            font-size: 5vh;
+            color: white;
+            opacity:0.5;
+            animation: floatAnimation linear infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(50px, -50px);
+            }
+            50% {
+                transform: translate(-50px, 50px);
+            }
+            75% {
+                transform: translate(50px, 50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .name-container {
+            display: flex;
+            font-size: 30vw;
+            font-weight: 700;
+            color: #ecf0f1;
+        }
+
+        .letter {
+            margin: 0 5px;
+            cursor: pointer;
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        .letter:nth-child(1) { font-family: Hikaru;  }
+        .letter:nth-child(2) { font-family: ABC;  }
+        .letter:nth-child(3) { font-family: Anthony; }
+        .letter:nth-child(4) { font-family: Hikaru;  }
+
+        .letter:hover {
+            transform: scale(1.2) rotate(180deg);
+            filter:blur(3px);
+            
+        }
+
+        .letter:active {
+            transform: scale(0.9);
+            filter:blur(0px);
+            
+        }
+
+        
+        
+
+        @media (max-width: 900px) {
+            .name-container {
+                font-size: 30vw;
+                
+            }
+        }
+
+        @media (max-width: 650px) {
+            .name-container {
+                font-size: 30vw;
+            }
+         
+        }
+
+        @media (max-width: 450px) {
+            .name-container {
+                font-size: 30vw;
+            }
+            
+        }
+    </style>
+
+      
   
   </head>
   <body>
-  
+    <script>
+      function createFloatingText() {
+          const text = document.createElement("div");
+          text.classList.add("floating-text");
+          text.textContent = "Horanghae";
+          document.body.appendChild(text);
+          
+          const x = Math.random() * (window.innerWidth - 200);
+          const y = Math.random() * (window.innerHeight - 100);
+          text.style.left = `${x}px`;
+          text.style.top = `${y}px`;
+          
+          text.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      }
+      
+      for (let i = 0; i < 10; i++) {
+          createFloatingText();
+      }
+  </script>
+    <div class="name-container">
+      <span class="letter">T</span>
+      <span class="letter">h</span>
+      <span class="letter">u</span>
+      <span class="letter">C</span>
+      
   </body>
   </html>
