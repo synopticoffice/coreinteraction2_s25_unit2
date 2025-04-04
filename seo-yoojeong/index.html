@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yoojeong Name Tag</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-main: 'Space Grotesk', sans-serif;
+      --bg: #000000; /* 갈색 배경 */
+      --hover-color: #ff3ec9; /* 형광 핑크 */
+      --click-color: #ff87e6; /* 연한 핑크 */
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      font-family: var(--font-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.2em;
+    }
+
+    .letter {
+      font-variation-settings: "wght" 400;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-size: 8vw;
+      color: white;
+    }
+
+    .letter:hover {
+      color: var(--hover-color);
+      transform: scale(1.3);
+      font-variation-settings: "wght" 700;
+    }
+
+    .letter:active {
+      color: var(--click-color);
+      transform: rotate(-8deg) scale(0.95);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 10vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">Y</span>
+    <span class="letter">o</span>
+    <span class="letter">o</span>
+    <span class="letter">j</span>
+    <span class="letter">e</span>
+    <span class="letter">o</span>
+    <span class="letter">n</span>
+    <span class="letter">g</span>
+  </div>
+</body>
+</html>
