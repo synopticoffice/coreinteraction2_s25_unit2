@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: 'Kumar One', cursive;
+    background-color: #d2ff20;
+    scroll-behavior: smooth;
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 0.1em;
+    flex-wrap: wrap;
+}
+
+.letter {
+    font-size: 10vw;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.letter:hover {
+    transform: scale(1.3) rotate(-5deg);
+}
+
+.letter:active {
+    transform: scale(0.9) rotate(5deg);
+}
+
+
+.section {
+    height: 100vh;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .letter {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .letter {
+        font-size: 14vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .letter {
+        font-size: 18vw;
+    }
+}
