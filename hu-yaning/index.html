@@ -3,10 +3,68 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Yaning Hu</title>
+      <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        .name-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .letter {
+            font-family: 'Codystar', sans-serif;
+            font-variation-settings: 'wght' 300;
+            font-size: 15vw;
+            font-weight: bolder;
+            color: blue;
+            cursor: pointer;
+            transition: transform 1s ease, font-variation-settings 0.3s ease;
+        }
+        
+        .letter:hover {
+            font-variation-settings: 'wght' 900;
+            transform: scale(1.2);
+            transform: rotate(1440deg) scale(1.1);
+        }
+        
+        .letter:active {
+          transform: scale(2);
+        }
+        
+        @media (max-width: 900px) {
+            .name-container { gap: 8px; }
+            .letter { font-size: 18vw; }
+        }
+
+        @media (max-width: 650px) {
+            .name-container { flex-direction: column; align-items: center; }
+            .letter { font-size: 20vw; }
+        }
+
+        @media (max-width: 450px) {
+            .letter { font-size: 25vw; }
+        }
+    </style>
   
   </head>
   <body>
-  
+    <div class="name-container">
+      <span class="letter">Y</span>
+      <span class="letter">A</span>
+      <span class="letter">N</span>
+      <span class="letter">I</span>
+      <span class="letter">N</span>
+      <span class="letter">G</span>
+  </div>
   </body>
   </html>
