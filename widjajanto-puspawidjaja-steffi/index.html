@@ -3,10 +3,165 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Steffi</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
   
   </head>
   <body>
   
+  <div class="name">
+    <span class="letter-s">S</span>
+    <span class="letter-t">T</span>
+    <span class="letter-e">E</span>
+    <span class="letter-f1">F</span>
+    <span class="letter-f2">F</span>
+    <span class="letter-i">I</span>
+  </div>
+
+  <style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e4d7cb;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 300px;
+      text-transform: uppercase;
+      color: white;
+      gap: 0.2em;
+    }
+
+    .letter-s {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-s:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-s:active {
+      transform: scale(0.8) rotate(8deg);
+      color: #819f97;
+    }
+
+    .letter-t {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-t:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-t:active {
+      transform: scale(0.8) rotate(-8deg);
+      color: #819f97;
+    }
+
+    .letter-e {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-e:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-e:active {
+      transform: scale(0.8) rotate(8deg);
+      color: #819f97;
+    }
+
+    .letter-f1 {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-f1:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-f1:active {
+      transform: scale(0.8) rotate(-8deg);
+      color: #819f97;
+    }
+
+    .letter-f2 {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-f2:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-f2:active {
+      transform: scale(0.8) rotate(8deg);
+      color: #819f97;
+    }
+
+    .letter-i {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter-i:hover {
+      transform: scale(1.5);
+      color: #c89090;
+      font-weight: bold;
+    }
+
+    .letter-i:active {
+      transform: scale(0.8) rotate(-8deg);
+      color: #819f97;
+    }
+
+    @media (max-width: 900px) {
+      .name {
+        font-size: 120px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .name {
+        font-size: 90px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .name {
+        font-size: 60px;
+      }
+    }
+  </style>
   </body>
   </html>
