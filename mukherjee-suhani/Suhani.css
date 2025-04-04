@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20vh;
+    background-color: #fff;
+  }
+  
+  .animated-name span {
+    display: inline-block;
+    font-size: 6rem;
+    animation: bounce 2s infinite;
+  }
+  
+  /* the bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+  }
+  
+  .animated-name span:nth-child(1) { animation-delay: 0s; }
+  .animated-name span:nth-child(2) { animation-delay: 0.15s; }
+  .animated-name span:nth-child(3) { animation-delay: 0.3s; }
+  .animated-name span:nth-child(4) { animation-delay: 0.1s; }
+  .animated-name span:nth-child(5) { animation-delay: 0.25s; }
+  .animated-name span:nth-child(6) { animation-delay: 0.4s; }
+  .animated-name span:nth-child(7) { animation-delay: 0s; } 
+  .animated-name span:nth-child(8) { animation-delay: 0.2s; }
+  .animated-name span:nth-child(9) { animation-delay: 0.35s; }
+  .animated-name span:nth-child(10) { animation-delay: 0.05s; }
+  .animated-name span:nth-child(11) { animation-delay: 0.3s; }
+  .animated-name span:nth-child(12) { animation-delay: 0.1s; }
+  .animated-name span:nth-child(13) { animation-delay: 0.45s; }
+  .animated-name span:nth-child(14) { animation-delay: 0.15s; }
+  .animated-name span:nth-child(15) { animation-delay: 0.4s; }
+  .animated-name span:nth-child(16) { animation-delay: 0.2s; }
+  
