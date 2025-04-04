@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Yeung</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letter {
+            position: absolute;
+            word-wrap: break-word;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        #J {
+            color: #8A8A8C;
+            font-size: calc(15vw + 10vh);
+            font-family: 'Pixelify Sans', sans-serif;
+            left: 10%;
+            top: 28%;
+        }
+
+        #U {
+            color: #422E2E;
+            font-size: calc(16vw + 10vh);
+            font-family: 'New Font', sans-serif;
+            left: 25%;
+            top: 30%;
+        }
+
+        #L {
+            color: #BDBDBD;
+            font-size: calc(12vw + 8vh);
+            font-family: 'New Font', sans-serif;
+            left: 50%;
+            top: 40%;
+        }
+
+        #I {
+            color: #766666;
+            font-size: calc(14vw + 9vh);
+            font-family: 'Pixelify Sans', sans-serif;
+            left: 70%;
+            top: 45%;
+        }
+
+        #E {
+            color: #3D1D1D;
+            font-size: calc(15vw + 10vh);
+            font-family: 'Pixelify Sans', sans-serif;
+            left: 80%;
+            top: 35%;
+        }
+
+        .letter:hover {
+            transform: scale(1.1);
+            color: #ff6b6b;
+        }
+
+        .letter:active {
+            transform: translateY(-10%);
+            color: #1dd1a1;
+        }
+
+        @media (max-width: 900px) {
+            .letter {
+                font-size: calc(12vw + 7vh);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .letter {
+                font-size: calc(10vw + 5vh);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .letter {
+                font-size: calc(8vw + 4vh);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="letter" id="J">J</div>
+        <div class="letter" id="U">U</div>
+        <div class="letter" id="L">L</div>
+        <div class="letter" id="I">I</div>
+        <div class="letter" id="E">E</div>
+    </div>
+</body>
+</html>
+
+
+          
