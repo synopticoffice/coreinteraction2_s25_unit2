@@ -1,12 +1,131 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;400;600;900&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #001c62;
+        }
+
+        #name {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-family: 'Doto', sans-serif;
+          font-size: 11vw;
+          font-weight: 400;
+          line-height: 1;
+          letter-spacing: 0.2em;
+        }
+
+        .word {
+            display: flex;
+            justify-content: center;
+            gap: 0.2em;
+        }
+
+        .word + .word {
+            margin-top: 0.2em;
+        }
+
+
+        .space {
+        width: 1em;
+        display: inline-block;
+        }
   
-  </head>
-  <body>
+        .letter {
+          display: inline-block;
+          transition: transform 0.3s ease, color 0.3s ease, font-variation-settings 0.3s ease;
+          font-variation-settings: "wght" 700;
+          color: #8dbeff;
+          transform: rotate(var(--angle));
+      }
+
+      .letter:nth-child(1) { --angle: -10deg; }
+      .letter:nth-child(2) { --angle: 5deg; }
+      .letter:nth-child(3) { --angle: -15deg; }
+      .letter:nth-child(4) { --angle: 8deg; }
+      .letter:nth-child(5) { --angle: -5deg; }
+      .letter:nth-child(6) { --angle: 12deg; }
+      .letter:nth-child(7) { --angle: -8deg; }
+      .letter:nth-child(8) { --angle: 6deg; }
+
+      .letter:hover {
+          transform: scale(1.2) rotate(0deg);
+          color: #ffffff;
+          font-variation-settings: "wght" 10;
+      }
+
+      .letter:active {
+          transform: scale(1.2) rotate(360deg);
+          color: #bbe5ff;
+          font-variation-settings: "wght" 1000;
+      }
+
+      @media (min-width: 900px) {
+          #name {
+              font-size: 15vw;
+          }
+      }
+
+      @media (max-width: 900px) {
+          #name {
+              font-size: 15vw;
+          }
+      }
+
+      @media (max-width: 650px) {
+          #name {
+              font-size: 14vw;
+          }
+      }
+
+      @media (max-width: 450px) {
+          #name {
+              font-size: 13vw;
+          }
+      }
+
+    </style>
+
+    <title>Elle Choo</title>
+</head>
+<body>
+
+  <div id="name">
+    <div class="word">
+        <span class="letter">E</span>
+        <span class="letter">L</span>
+        <span class="letter">L</span>
+        <span class="letter">E</span>
+    </div>
+    <div class="word">
+        <span class="letter">C</span>
+        <span class="letter">H</span>
+        <span class="letter">O</span>
+        <span class="letter">O</span>
+    </div>
+</div>
   
-  </body>
-  </html>
+</body>
+</html>
