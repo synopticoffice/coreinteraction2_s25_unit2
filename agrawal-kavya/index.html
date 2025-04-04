@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAVYA</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wms6upj.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fffff2;
+        }
+
+        .name-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .letter {
+            color: #e7c264;
+            font-family: "blackest", sans-serif;
+            font-weight: 700;
+            font-size: 22vw;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover Effect: Scale and Rotate */
+        .letter:hover {
+            transform: scale(1.2) rotate(120deg); /* Scale and rotate on hover */
+            color: #287d30;
+        }
+
+        /* Click Effect: Rotate in opposite direction and change color */
+        .letter:active {
+            transform: rotate(-120deg); /* Rotate in opposite direction */
+            color: antiquewhite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .letter { font-size: 12vw; }
+        }
+
+        @media (max-width: 650px) {
+            .letter { font-size: 10vw; }
+        }
+
+        @media (max-width: 450px) {
+            .letter { font-size: 8vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="name-container">
+        <span class="letter">K</span>
+        <span class="letter">A</span>
+        <span class="letter">V</span>
+        <span class="letter">Y</span>
+        <span class="letter">A</span>
+    </div>
+</body>
+</html>
