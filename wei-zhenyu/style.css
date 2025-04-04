@@ -1,0 +1,75 @@
+/* 背景与全局设置 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #1e0033, #4b0082);
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* 星星粒子背景 */
+  .stars, .stars2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat;
+    background-size: 50px;
+    animation: moveStars 100s linear infinite;
+    opacity: 0.2;
+  }
+  .stars2 {
+    animation: moveStars 150s linear infinite reverse;
+    opacity: 0.15;
+  }
+  
+  @keyframes moveStars {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50%, -50%); }
+  }
+  
+  /* 名字 */
+  .name-tag {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* 字母样式 */
+  .letter {
+    font-size: 18vw;
+    font-variation-settings: "wght" 400;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #a174ff;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    padding: 0 1vw;
+    user-select: none;
+  }
+  
+  /* Hover 状态 */
+  .letter:hover {
+    font-variation-settings: "wght" 700;
+    transform: scale(1.15) translateY(-5px);
+    text-shadow: 0 0 20px #fff, 0 0 40px #a174ff;
+  }
+  
+  /* Breakpoints 响应式 */
+  @media (max-width: 900px) {
+    .letter { font-size: 22vw; }
+  }
+  @media (max-width: 650px) {
+    .letter { font-size: 28vw; }
+  }
+  @media (max-width: 450px) {
+    .letter { font-size: 32vw; }
+  }
+  
