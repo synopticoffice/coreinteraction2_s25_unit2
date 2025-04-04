@@ -3,10 +3,99 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Yisu Kang</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+    
+
+      <style>
+        body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 110vh;
+          margin: 0;
+          background-color: rgb(237, 31, 131);
+          color: pink;
+
+          font-family: "Inconsolata", monospace;
+          font-variation-settings: "wght" 200;
+        }
+
+        .letters{
+          display: flex;
+          gap: 6px;
+        }
+
+        .letters{
+          transition: transform 0.3s;
+          font-variation-settings: 0.3s;
+        }
+
+        .Y:hover{
+          transform: scale(1.5);
+          font-style: italic;
+          font-variation-settings: 'wght' 400;
+          color: yellow;
+        }
+        .Y:active{
+          color: aquamarine;
+        }
+
+        .I:hover{
+          transform: scale(1.5);
+          font-variation-settings: 'wght' 400;
+          color: yellowgreen;
+        }
+
+        .I:active{
+          color:rgb(10, 116, 70)
+        }
+
+        .S:hover{
+          transform: scale(1.5);
+
+          font-variation-settings: 'wght'400;
+          color: blueviolet;
+        }
+
+        .S:active{
+          transform: scale(1.5) rotate(-20deg);
+          color: aqua;
+        }
+
+        .U:hover{
+          transform: scale(1.5);
+          font-variation-settings: 'wght'400;
+          color: rgb(44, 255, 135);
+        }
+
+        .U:active{
+          color: rgb(28, 115, 255);
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+        }
+        @media (max-width: 900px) {
+            .letters { font-size: 20vw; }
+        }
+        @media (max-width: 650px) {
+            .letters { font-size: 15vw; }
+        }
+        @media (max-width: 450px) {
+            .letters { font-size: 10vw; }
+        }
+        
+      </style>
   
   </head>
   <body>
-  
+    <div class="letters">
+      <span class="Y">Y</span>
+      <span class="I">I</span>
+      <span class="S">S</span>
+      <span class="U">U</span>
+    </div>
   </body>
   </html>
