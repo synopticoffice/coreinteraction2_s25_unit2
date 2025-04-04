@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETRA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(58, 107, 63, 0.91);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .name-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter {
+      font-variation-settings: "wght" 300;
+      font-size: 10vw;
+      cursor: pointer;
+      transition: transform 0.3s ease, font-variation-settings 0.3s ease, color 0.3s ease;
+      color: rgba(242, 237, 223, 0.91);
+    }
+
+    .letter:hover {
+      transform: scale(3) rotate(-6deg);
+      font-variation-settings: "wght" 700;
+      color: rgba(131, 178, 136, 0.91);
+    }
+
+.background:hover {
+      color: rgba(131, 178, 136, 0.91);
+    }
+
+    /* Responsive breakpoints */
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 16vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-container">
+    <span class="letter" onmouseover="changeBackgroundColor: rgba(65, 97, 56, 0.91; onmouseout="resetBackgroundColor()">N</span>
+    <span class="letter" onmouseover="changeBackgroundColor: rgba(131, 178, 136, 0.91); onmouseout="resetBackgroundColor()">E</span>
+    <span class="letter" onmouseover="changeBackgroundColor: rgba(65, 97, 56, 0.91); onmouseout="resetBackgroundColor()">T</span>
+    <span class="letter" onmouseover="changeBackgroundColor: rgba(131, 178, 136, 0.91); onmouseout="resetBackgroundColor()">R</span>
+    <span class="letter" onmouseover="changeBackgroundColor: rgba(65, 97, 56, 0.91); onmouseout="resetBackgroundColor()">A</span>
+  </div>
+
+  <script>
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color; rgba(65, 97, 56, 0.91)
+    }
+
+    function resetBackgroundColor() {
+      document.body.style.backgroundColor = rgba(65, 97, 56, 0.91); /* Reset to original background color */
+    }
+  </script>
+</body>
+</html>
