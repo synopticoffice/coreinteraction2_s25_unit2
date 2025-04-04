@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gahyun Nam</title>
+  <link href="https://fonts.googleapis.com/css2?family=GT+Ultra:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="name">
+    <span class="letter" data-letter="G">G</span>
+    <span class="letter" data-letter="a">a</span>
+    <span class="letter" data-letter="h">h</span>
+    <span class="letter" data-letter="y">y</span>
+    <span class="letter" data-letter="u">u</span>
+    <span class="letter" data-letter="n">n</span>
+  </div>
+</body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GT Ultra', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.name {
+  display: flex;
+  font-size: 10vw;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+}
+
+.letter {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.letter:hover {
+  transform: translateY(-10px);
+  color: #520090;
+}
+
+.letter:active {
+  transform: scale(1.2);
+  color: #b43ec8;
+}
+
+@media (max-width: 900px) {
+  .name {
+    font-size: 12vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .name {
+    font-size: 16vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .name {
+    font-size: 18vw;
+  }
+}
+
+</style>
+</html>
