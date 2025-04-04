@@ -3,10 +3,61 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Quiz</title>
   
   </head>
   <body>
-  
+    <h1 class="j">J</h1>
+    <h1 class="a">A</h1>
+    <h1 class="n">N</h1>
+    <h1 class="i">I</h1>
+    <h1 class="c">C</h1>
+    <h1 class="e">E</h1>
+
   </body>
   </html>
+
+  <style>
+
+    body {
+        background-color: #000000;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        position: relative;
+    }
+.j{
+  font-family: 'Courier New', Courier, monospace;
+}
+.a{
+  font-family: 'Times New Roman', Times, serif;
+}
+.n{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.e{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.i{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+    .j, .a, .n, .i, .c, .e {
+    color: #ffffff;
+    display: inline-block; /* Ensures animations apply correctly */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.j:hover, .a:hover, .n:hover, .i:hover, .c:hover, .e:hover {
+    transform: scale(1.2);
+    color: #ffcc00; /* Change to any highlight color */
+}
+
+/* Click animation */
+.j:active, .a:active, .n:active, .i:active, .c:active, .e:active {
+    transform: scale(0.9);
+    color: #ff6600; /* Change to any clicked color */
+}
+      
+
+  </style>
