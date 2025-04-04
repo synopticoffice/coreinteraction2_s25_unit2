@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Name Tag</title>
-  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #000000;
@@ -20,13 +22,13 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
-      transition: background-color 0.5s ease;
     }
 
     .name {
       display: flex;
-      font-family: 'DM Serif Display', serif;
-      font-size: 18vw;
+      font-family: "Boldonse", system-ui;
+      font-weight: 400;
+      font-size: 12vw;
       color: var(--primary);
     
       transition: color 0.5s ease;
