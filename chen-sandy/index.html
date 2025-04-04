@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sandy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: linear-gradient(135deg, #ffe4e1, #d8bfd8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .name-container {
+      display: flex;
+      gap: 0.1em;
+      flex-wrap: wrap;
+    }
+
+    .letter {
+      font-variation-settings: "wght" 400;
+      font-size: 12vw;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .letter:hover {
+      font-variation-settings: "wght" 800;
+      transform: scale(1.2) rotate(-5deg);
+      color: #800080;
+    }
+
+    .letter:active {
+      font-variation-settings: "wght" 100;
+      transform: scale(0.8) rotate(5deg);
+      color: #ff1493;
+    }
+
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 18vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 22vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-container">
+    <span class="letter">S</span>
+    <span class="letter">a</span>
+    <span class="letter">n</span>
+    <span class="letter">d</span>
+    <span class="letter">y</span>
+  </div>
+</body>
+</html>
