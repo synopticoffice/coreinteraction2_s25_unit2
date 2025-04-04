@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout with iframes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,16 +14,62 @@
         }
 
         body {
+          background-color: rgb(195, 204, 222);
             display: grid;
             place-items: center;
             height: 100vh;
-            font-family: 'Times New Roman', Times, serif;
+            color:rgb(73, 81, 114);
+            font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "YEAR" 1979;
         }
 
         div {
             font-size: 20em;
             text-align: center;
         }
+
+        .name {
+      display: flex;
+      gap: 1vw;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+        .letter {
+      font-variation-settings: "wght" 400, "slnt" 0, "CASL" 0.5, "MONO" 0;
+      font-size: 15vw;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      user-select: none;
+      transform-origin: center;
+      display: inline-block;
+      position: relative;
+    }
+
+    .letter:hover {
+      font-variation-settings: "wght" 600, "slnt" -10, "CASL" 1, "MONO" 0;
+      transform: rotate(5deg) scale(1.05);
+      color: #ffae00;
+    }
+
+    .letter.clicked {
+  font-variation-settings: "wght" 300, "slnt" -5, "CASL" 1, "MONO" 0;
+  color: #77d6c5; 
+  animation: bounce 0.6s ease-out;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1.1) translateY(-5px); }
+  50%  { transform: scale(1.05) translateY(2px); }
+  100% { transform: scale(1) translateY(0); }
+}
 
         @media screen and (max-width: 900px) {
             div {
@@ -37,14 +85,23 @@
 
         @media screen and (max-width: 450px) {
             div {
-                font-size: 2.5em;
+                font-size: 3em;
             }
         }
 
 
     </style>
+
 </head>
+
 <body>
-    <div>Hi!</div>
+  <div class="name">
+    <span class="letter">M</span>
+    <span class="letter">i</span>
+    <span class="letter">u</span>
+    <span class="letter">M</span>
+    <span class="letter">i</span>
+    <span class="letter">u</span>
+ 
 </body>
 </html>
