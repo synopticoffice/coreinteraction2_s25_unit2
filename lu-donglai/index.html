@@ -3,10 +3,89 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+      <title>Donglai Lu</title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+    
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          background: repeating-radial-gradient(circle at center, #ffe, #ffd6d6, #fffacd 10%);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
+    
+        .name-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 30px;
+          gap: 10px;
+        }
+    
+        .letter {
+          font-family: 'Rubik Mono One', sans-serif;
+          font-size: 10vw;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          transform: rotate(calc(-20deg + 40deg * var(--random)));
+          color: hsl(calc(360 * var(--random)), 80%, 60%);
+          animation: float 3s ease-in-out infinite alternate;
+          animation-delay: calc(0.1s * var(--i));
+        }
+    
+        .letter:hover {
+          transform: scale(1.5) rotate(calc(-30deg + 60deg * var(--random)));
+          color: black;
+          text-shadow: 2px 2px hotpink;
+          animation-play-state: paused;
+        }
+    
+        .letter:active {
+          transform: scale(0.8) rotate(360deg);
+          filter: invert(100%);
+        }
+    
+        @keyframes float {
+          0% { transform: translateY(0) rotate(calc(-20deg + 40deg * var(--random))); }
+          100% { transform: translateY(-20px) rotate(calc(-20deg + 40deg * var(--random))); }
+        }
+    
+        @media (max-width: 900px) {
+          .letter { font-size: 12vw; }
+        }
+    
+        @media (max-width: 650px) {
+          .letter { font-size: 14vw; }
+        }
+    
+        @media (max-width: 450px) {
+          .letter { font-size: 16vw; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="name-container">
+        <span class="letter" style="--i:0; --random:0.1">D</span>
+        <span class="letter" style="--i:1; --random:0.4">o</span>
+        <span class="letter" style="--i:2; --random:0.9">n</span>
+        <span class="letter" style="--i:3; --random:0.3">g</span>
+        <span class="letter" style="--i:4; --random:0.7">l</span>
+        <span class="letter" style="--i:5; --random:0.2">a</span>
+        <span class="letter" style="--i:6; --random:0.8">i</span>
+        <span class="letter" style="--i:7; --random:0.5">&nbsp;</span>
+        <span class="letter" style="--i:8; --random:0.6">L</span>
+        <span class="letter" style="--i:9; --random:0.3">u</span>
+      </div>
+    </body>
+    </html>
+    
