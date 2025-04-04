@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michelle Interactive Composition</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,MONO@-15..0,300..1000,0..1,0..1&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #fce4ec, #e3f2fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .name {
+      display: flex;
+      gap: 0.2em;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter {
+      font-family: 'Recursive', sans-serif;
+      font-size: 10vw;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+      padding: 0.1em 0.2em;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .letter:hover {
+      background-color: #ffccda;
+      font-weight: 800;
+      transform: scale(1.2) rotate(-3deg);
+    }
+
+    .letter:active {
+      transform: scale(0.9) rotate(3deg);
+      background-color: #b2ebf2;
+    }
+
+    /* Responsive font sizing */
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 16vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">M</span>
+    <span class="letter">i</span>
+    <span class="letter">c</span>
+    <span class="letter">h</span>
+    <span class="letter">e</span>
+    <span class="letter">l</span>
+    <span class="letter">l</span>
+    <span class="letter">e</span>
+  </div>
+
+  <script>
+    document.querySelectorAll('.letter').forEach(letter => {
+      letter.addEventListener('mouseover', () => {
+        letter.style.setProperty('--wght', 800);
+      });
+
+      letter.addEventListener('mouseout', () => {
+        letter.style.setProperty('--wght', 400);
+      });
+
+      letter.addEventListener('click', () => {
+        letter.style.transform = 'scale(1.1) rotate(5deg)';
+        setTimeout(() => {
+          letter.style.transform = '';
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
