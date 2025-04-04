@@ -3,10 +3,123 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <title>Minnie Wang</title>
   
   </head>
   <body>
-  
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+      <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #fef9f4, #f0f0ff);
+          font-family: 'Inter', sans-serif;
+          overflow: hidden;
+        }
+    
+        .name-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  text-align: center;
+}
+
+.name-line {
+  display: flex;
+  gap: 0.05em;
+}
+
+    
+    /* Typography & Effects */
+.letter {
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 700;
+  font-size: 10vw;
+  transition: transform 0.3s, font-variation-settings 0.3s;
+  cursor: pointer;
+}
+
+.letter:hover {
+  transform: scale(1.1) rotate(-5deg);
+  font-variation-settings: 'wght' 850;
+}
+
+.letter:active {
+  animation: pulse 0.3s ease;
+  font-variation-settings: 'wght' 300;
+}
+    /* Letter Colors */
+.letter.m { color: #ff6b6b; }
+.letter.i1 { color: #ffa94d; }
+.letter.n1 { color: #fadb14; }
+.letter.n2 { color: #40c057; }
+.letter.i2 { color: #38d9a9; }
+.letter.e { color: #5c7cfa; }
+.letter.w { color: #9775fa; }
+.letter.a { color: #da77f2; }
+.letter.n3 { color: #f06595; }
+.letter.g { color: #adb5bd; }
+
+
+
+    
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .letter { font-size: 12vw; }
+}
+@media (max-width: 650px) {
+  .letter { font-size: 14vw; }
+}
+@media (max-width: 450px) {
+  .name-container {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+  .name-line {
+    justify-content: center;
+  }
+}
+
+        
+      </style>
+    </head>
+    <body>
+      <div class="name-container">
+        <div class="name-line minnie">
+          <span class="letter m">M</span>
+          <span class="letter i1">I</span>
+          <span class="letter n1">N</span>
+          <span class="letter n2">N</span>
+          <span class="letter i2">I</span>
+          <span class="letter e">E</span>
+        </div>
+        <div class="name-line wang">
+          <span class="letter w">W</span>
+          <span class="letter a">A</span>
+          <span class="letter n3">N</span>
+          <span class="letter g">G</span>
+        </div>
+      </div>      
+      
+    
+ 
   </body>
   </html>
