@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>keyaa kapadia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,50..150,100..900,-50..100;1,8..144,50..150,100..900,-50..100&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Roboto Serif", serif;
+      overflow: hidden;
+    }
+
+    .name-container {
+      display: flex;
+      gap: 1vw;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter {
+      font-size: 30vw;
+      transition: color 1s ease, transform 0.5s ease, text-shadow 0.5s ease;
+      cursor: pointer;
+      color: black;
+      text-shadow:
+        -2px -2px 0 #fff,
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff;
+    }
+
+    .letter:hover {
+      font-weight: bold;
+      transform: scale(1.2) rotate(10deg);
+      text-shadow:
+        -3px -3px 0 #fff,
+         3px -3px 0 #fff,
+        -3px  3px 0 #fff,
+         3px  3px 0 #fff,
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    }
+
+    .letter-k:hover { color: #90CEE7; }
+    .letter-e:hover { color: #90CFE4; }
+    .letter-y:hover { color: #91C6E1; }
+    .letter-a1:hover { color: #92C8E3; }
+    .letter-a2:hover { color: #92D0DB; }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 12vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 14vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 16vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-container">
+    <span class="letter letter-k">k</span>
+    <span class="letter letter-e">e</span>
+    <span class="letter letter-y">y</span>
+    <span class="letter letter-a1">a</span>
+    <span class="letter letter-a2">a</span>
+  </div>
+</body>
+</html>
