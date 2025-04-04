@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yujin Name Tag</title>
+    <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-image: url('https://pbs.twimg.com/media/GMQsWTCaYAAFeAq.jpg');
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+      }
+
+      .name {
+          display: flex;
+          gap: 1vw;
+      }
+
+      .letter {
+          font-family: "Satoshi", sans-serif;
+          font-weight: 800;
+          font-size: 15vw;
+          transition: transform 0.4s ease-in-out, color 0.35s ease-in-out, scale 0.4s ease-in-out;
+          cursor: pointer;
+          color: #ffacec;
+      }
+
+      .letter:hover {
+          color: #ff007b;
+          transform: translateY(-15px) scale(1.5) rotate(15deg);
+      }
+
+      .letter:active {
+          color: #ffb86c;
+          transform: scale(1.4, 0.5) rotate(-5deg);
+      }
+
+      @media (max-width: 900px) {
+          .name {
+              flex-direction: row;
+          }
+      }
+      
+      @media (max-width: 650px) {
+          .name {
+              flex-direction: column;
+          }
+      }
+
+      @media (max-width: 450px) {
+          .letter {
+              font-size: 18vw;
+          }
+      }
+  </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter">Y</span>
+        <span class="letter">U</span>
+        <span class="letter">J</span>
+        <span class="letter">I</span>
+        <span class="letter">N</span>
+    </div>
+</body>
+</html>
