@@ -1,12 +1,94 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name Tag</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --primary: #333;
+      --accent: #ffffffd2;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .name {
+      display: flex;
+      font-family: "Boldonse", system-ui;
+      font-weight: 400;
+      font-size: 12vw;
+      color: var(--primary);
+    
+      transition: color 0.5s ease;
+      letter-spacing: 0.05em;
+    }
+
+    .letter {
+      display: inline-block;
+      transition: transform 0.2s ease, color 0.3s;
+      cursor: pointer;
+    }
+
+    .letter:hover {
+      transform: rotate(-10deg) scale(1.2);
+      color: var(--accent);
+    }
+
+    .letter:active {
+      transform: rotate(20deg) scale(0.92);
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-color: #f0f4f8;
+      }
+      .name {
+        font-size: 10vw;
+        font-weight: lighter;
+        color: #1d3557;
+      }
+    }
+
+    @media (max-width: 650px) {
+      body {
+        background-color: #e0f7f1;
+      }
+      .name {
+        font-size: 12vw;
+        color: #2a9d8f;
+      }
+    }
+
+    @media (max-width: 450px) {
+      body {
+        background-color: #fef2ef;
+      }
+      .name {
+        font-size: 14vw;
+        color: #e76f51;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">K</span>
+    <span class="letter">u</span>
+    <span class="letter">n</span>
+  </div>
+</body>
+</html>
+
+
