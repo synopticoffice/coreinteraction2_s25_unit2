@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #fffaf0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,7 @@ body {
 .letter {
   font-family: 'Roboto Flex', sans-serif;
   font-size: 10vw;
+  color: #6A0DAD;
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
   display: inline-block;
