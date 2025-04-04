@@ -1,0 +1,192 @@
+.modak-regular {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .rubik-puddles-regular {
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .rammetto-one-regular {
+    font-family: "Rammetto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    background-color: #5c92e3;
+    font-family: 'Rammetto One', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Creative border */
+  .border-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .border-container::before,
+  .border-container::after {
+    content: '';
+    position: absolute;
+    background-color: #c4c7cf;
+  }
+  
+  /* Horizontal borders */
+  .border-container::before {
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #c4c7cf;
+  }
+  
+  .border-container::after {
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #c4c7cf;
+  }
+  
+  /* Vertical borders */
+  .border-left, .border-right {
+    position: absolute;
+    width: 10px;
+    top: 30px;
+    bottom: 30px;
+    background-color: #c4c7cf;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+  }
+  
+  .border-left {
+    left: 30px;
+  }
+  
+  .border-right {
+    right: 30px;
+  }
+  
+  .corner.top-left {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .corner.top-right {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .corner.bottom-left {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .corner.bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Confetti container - now BELOW the letters */
+  .confetti-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  /* Name container now with higher z-index */
+  .name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .letter {
+    font-size: 25vh;
+    font-weight: 700;
+    color: #1a1e94;
+    text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
+    margin: 0 1vw;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover glow effect */
+  .letter:hover {
+    text-shadow: 0 0 20px rgba(231, 241, 254, 0.8), 
+                 0 0 40px rgba(68, 160, 230, 0.6),
+                 0 0 60px #c4c7cf7d;
+    transform: translateY(-5px);
+  }
+  
+  /* Confetti dots */
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1a1e94;
+    opacity: 0;
+    animation: fall 1s ease forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--tx), var(--ty));
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 900px) {
+    .letter {
+      font-size: 20vh;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .letter {
+      font-size: 15vh;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .name-container {
+      flex-direction: column;
+    }
+    
+    .letter {
+      font-size: 18vh;
+      margin: -2vh 0;
+    }
+  }
