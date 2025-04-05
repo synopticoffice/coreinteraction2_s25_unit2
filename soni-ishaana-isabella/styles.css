@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.letter {
+    font-family: "Fraunces", serif;
+    font-size: 20vw;
+    font-weight: 500;
+    color: #fe57aa;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.letter:hover {
+    font-weight: 900;
+    transform: scale(1.2);
+    color: #ff71b8;
+}
+
+
+.letter.i:hover {
+    transform: rotate(-10deg);
+    color: #fb7bbb;
+    
+}
+
+.letter.s:hover {
+    transform: translateY(-30px);
+    color: #fa8bc3;
+}
+
+.letter.h:hover {
+    transform: skewX(-5deg);
+    color: #fc9ccc;
+}
+
+.letter.a:hover {
+    transform: rotate(12deg) translateY(-20px);
+    color: #fa9fcd;
+}
+
+.letter.a2:hover {
+    transform: rotate(-12deg); 
+    color: #faa9d0;
+}
+
+.letter.n:hover {
+    transform: translateY(-10px);
+    color: #fbb0d5;
+}
+
+.letter.a3:hover {
+    transform: rotate(-5deg);
+    color: #fbb8d9;
+}
+
+/* active */
+.letter:active {
+    transition: 0.1s ease all;
+    font-weight: 100;
+}
+
+.letter.i:active {
+    transform: scale(1.2) translateY(25px);
+}
+
+.letter.s:active {
+    transform: scale(0.4) rotate(15deg);
+}
+
+.letter.h:active {
+    transform: scale(2.3) translateY(-15px);
+}
+
+.letter.a:active {
+    transform: scale(0.7) skewX(10deg);
+}
+
+.letter.a2:active {
+    transform: scale(4) rotate(-10deg);
+}
+
+.letter.n:active {
+    transform: scale(0.9) rotate(10deg);
+}
+
+.letter.a3:active {
+    transform: scale(0.2) skewX(-10deg);
+}
+
+
+@media screen and (max-width: 900px) {
+    .letter {
+        font-size: 15vw;
+    }
+  
+}
+
+@media screen and (max-width: 650px) {
+    .letter {
+        font-size: 12vw;
+        font-weight: 400;
+    }
+    .container {
+        flex-direction: column;
+        gap: -10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .letter {
+        font-size: 18vw;
+        font-weight: 200;
+    }
+    .container {
+        flex-direction: column;
+        gap: 0px;
+    }
+}

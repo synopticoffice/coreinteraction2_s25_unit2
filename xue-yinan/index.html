@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yinan Xue</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: #fefefe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Inter", sans-serif;
+      }
+
+      .name-tag {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        text-align: center;
+      }
+
+      .letter {
+        font-variation-settings: "wght" 800;
+        font-size: 10vw;
+        transition: all 0.3s ease;
+        display: inline-block;
+        cursor: pointer;
+        user-select: none;
+        margin: 0.2em;
+      }
+
+      .letter:hover {
+        font-variation-settings: "wght" 700;
+        transform: scale(1.2) rotate(5deg);
+        color: #fed621;
+      }
+
+      .letter:active {
+        font-variation-settings: "wght" 900;
+        transform: scale(1.4) rotate(-5deg);
+        color: #0099ff;
+      }
+
+      /* Breakpoints */
+      @media screen and (max-width: 900px) {
+        div {
+            font-size: 10em;
+        }
+    }
+    
+    @media screen and (max-width: 650px) {
+        div {
+            font-size: 5em;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        div {
+            font-size: 2.5em;
+        }
+    }
+    </style>
   </head>
   <body>
-  
+    <div class="name-tag">
+      <span class="letter">Y</span>
+      <span class="letter">i</span>
+      <span class="letter">n</span>
+      <span class="letter">a</span>
+      <span class="letter">n</span>
+      <span class="letter">&nbsp;</span>
+      <span class="letter">X</span>
+      <span class="letter">u</span>
+      <span class="letter">e</span>
+    </div>
   </body>
-  </html>
+</html>

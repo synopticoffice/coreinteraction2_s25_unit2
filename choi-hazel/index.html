@@ -3,10 +3,66 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+      <title>Hazel Choi</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+      <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #00000000;
+        overflow: hidden;
+    }
+
+    .name {
+        display: flex;
+        gap: 5vw;
+        font-family: 'Lilita One', sans-serif;
+        font-size: 10vw;
+        font-variation-settings: "wght" 400;
+        color: #e2b0d8;
+        transition: all 0.3s ease;
+    }
+
+    .letter {
+        display: inline-block;
+        transition: transform 0.2s, font-variation-settings 0.3s;
+    }
+
+    .letter:hover {
+        transform: scale(1.2);
+        font-variation-settings: "wght" 700;
+        color: #e285cf;
+    }
+
+    .letter:active {
+        transform: rotate(15deg) scale(1.3);
+        font-variation-settings: "wght" 900;
+        color: #b14f9d;
+    }
+
+    @media (max-width: 900px) {
+        .name { font-size: 12vw; gap: 4vw; }
+    }
+
+    @media (max-width: 650px) {
+        .name { flex-wrap: wrap; font-size: 14vw; gap: 2vw; }
+    }
+
+    @media (max-width: 450px) {
+        .name { font-size: 16vw; gap: 1vw; }
+    }
+</style>
   </head>
   <body>
-  
-  </body>
+    <div class="name">
+        <span class="letter">H</span>
+        <span class="letter">a</span>
+        <span class="letter">z</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+    </div>
+</body>
   </html>

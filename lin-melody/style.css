@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: pink;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        width:fit-content;
+    }
+    .letter{
+        transform: scale(0.4);
+        margin: -40px;
+    }
+}
+ 
+@media screen and (max-width: 650px) {
+    .container{
+        width:fit-content;
+    }
+    .letter{
+        transform: scale(0.3);
+        margin: -50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container{
+        width:fit-content;
+    }
+    .letter{
+        transform: scale(0.2);
+        margin: -60px;
+    }
+}
+
+.letter{
+    font-size: 200px;
+    display: inline-block;
+}
+
+.letter:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.letter:active{
+    color: skyblue;
+}
+
+@keyframes spin {
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+.M{
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.M:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.E {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.E:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.L {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.L:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.O {
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.O:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.D {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.D:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+  
+.Y {
+    font-family: "Sonsie One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.Y:hover{
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}

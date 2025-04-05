@@ -1,0 +1,113 @@
+body {
+    font-family: "config-variable",sans-serif;
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6fd;
+  }
+  
+  .word {
+    display: flex;
+    gap: 5px; /* Space between the letters */
+  }
+  
+  .j {
+    color: #333;
+    transition: transform 0.3s linear;
+  }
+  
+  .j:hover {
+    transform: scale(1.25); /* Scale the letter when hovered */
+  }
+  
+  .u {
+    color: #333;
+    transition: transform 0.3s linear;
+  }
+  
+  .u:hover {
+    color: blue;
+    transform: scale(96%);
+  }
+
+  .s {
+    color: #333;
+    transition: all 0.3s linear;
+  }
+  
+  .s:hover {
+    font-style:italic;
+    transform:scale(105%);
+  }
+
+  .t {
+    color: #333;
+    transition: all 0.3s linear;
+  }
+  
+  .t:hover {
+    color:rgb(255, 100, 209);
+  }
+
+  .i {
+    color: #333;
+    transition: transform 0.3s linear;
+  }
+  
+  .i:hover {
+    transform: scale(.5); /* Scale the letter when hovered */
+  }
+
+  .n {
+    color: #333;
+    transition: transform 0.3s linear;
+  }
+  
+  .n:hover {
+    color:lime;
+    transform:rotate(25deg);
+  }
+
+  .e {
+    color: #333;
+    transition: transform 0.3s linear;
+  }
+  
+  .e:hover {
+    transform: scale(2.25); /* Scale the letter when hovered */
+  }
+
+
+  @media (max-width: 900px) {
+    body {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .word {
+      margin: 5px;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    body {
+      padding: 5px;
+    }
+    .word {
+      padding: 10px;
+      font-size: 100px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    body {
+      padding: 8px;
+    }
+    .word {
+      padding: 2px;
+      font-size: 50px;
+    }
+  }

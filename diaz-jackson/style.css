@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    overflow: hidden;
+    height: 100%;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: red;
+    padding-right: 50px;
+    height: 100vh;
+}
+
+.inter-uniquifier {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.letter{
+    font-family: inter;
+    letter-spacing: -40px;
+    font-size: 40vw;
+    transition: 200ms ease-in-out;
+    color: white;
+    user-select: none;
+    text-align: center;
+}
+
+.letter:hover{
+    font-weight: 100;
+    transition: 200ms ease-in-out;
+    transform: rotate(5deg);
+}
+
+.letter:active{
+    color: blue;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 600px){
+    .letter{
+        font-size: 200pt;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .letter{
+        font-size: 300pt;
+    }
+}

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Recursive';
+    src: url('https://fonts.gstatic.com/s/recursive/v25/0nksC9ji5N3D-j78o0E6U7E3S5L2w6HMJ2s.woff2') format('woff2');
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 400;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #fbd5e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "wght" 700;
+    font-size: 10vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .letter {
+    display: inline-block;
+    padding: 0.2em;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .letter:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: #3f51b5;
+  }
+
+  .letter:active {
+    transform: scale(0.9) rotate(-5deg);
+    color: #e91e63;
+  }
+
+  @media (max-width: 900px) {
+    .name {
+      font-size: 12vw;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .name {
+      font-size: 14vw;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .name {
+      font-size: 16vw;
+    }
+  }

@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EVON</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .name {
+      display: flex;
+    }
+
+    .letter {
+      font-size: 20em;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .letter:hover {
+      transform: scale(1.5);
+      color: #87d80a;
+    }
+
+    .letter.clicked {
+      color: #0aa2d8;
+      transform: scale(0.9);
+    }
+
+    @media (max-width: 900px) {
+      .letter { font-size: 15vw; }
+    }
+
+    @media (max-width: 650px) {
+      .letter { font-size: 10vw; }
+    }
+
+    @media (max-width: 450px) {
+      .letter { font-size: 8vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">E</span>
+    <span class="letter">V</span>
+    <span class="letter">O</span>
+    <span class="letter">N</span>
+  </div>
+
+  <script>
+    document.querySelectorAll('.letter').forEach(letter => {
+      letter.addEventListener('click', () => {
+        letter.classList.toggle('clicked');
+      });
+    });
+  </script>
+</body>
+</html>

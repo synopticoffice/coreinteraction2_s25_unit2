@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.letter{
+    display: inline;
+}
+
+.a{
+    display: inline;
+}
+
+.a:hover{
+    color: red;
+}
+
+.a:active{
+    text-decoration: underline;
+}
+
+
+.l{
+    display: inline;
+}
+
+.l:hover{
+    color: limegreen;
+    font-style: italic;
+}
+
+.l:active{
+    text-decoration: underline;
+}
+
+
+.e{
+    display: inline;
+}
+
+.e:hover{
+    color: rgb(33, 12, 168);
+}
+
+.e:active{
+    text-decoration: underline;
+}
+
+.x{
+    display: inline;
+}
+
+.x:hover{
+    color: rgb(112, 9, 28);
+    font-style: italic;
+
+}
+
+.x:active{
+    text-decoration: underline;
+}
+
+.i{
+    display: inline;
+}
+
+.i:hover{
+    color: rgb(231, 19, 255);
+}
+
+.i:active{
+    text-decoration: underline;
+}
+
+.a2{
+    display: inline;
+}
+
+.a2:hover{
+    color: rgb(50, 171, 205);
+    font-style: italic;
+
+}
+
+.a2:active{
+    text-decoration: underline;
+}
+
+.b{
+    display: inline;
+}
+
+.b:hover{
+    color: rgb(196, 225, 137);
+}
+
+.b:active{
+    text-decoration: underline;
+}
+
+.e2{
+    display: inline;
+}
+
+.e2:hover{
+    color: rgb(255, 123, 0);
+    font-style: italic;
+
+}
+
+.e2:active{
+    text-decoration: underline;
+}
+
+.h{
+    display: inline;
+}
+
+.h:hover{
+    color: rgb(66, 6, 178);
+}
+
+.h:active{
+    text-decoration: underline;
+}
+
+.a3{
+    display: inline;
+}
+
+.a3:hover{
+    color: rgb(242, 255, 0);
+    font-style: italic;
+
+}
+
+.a3:active{
+    text-decoration: underline;
+}
+
+.r{
+    display: inline;
+}
+
+.r:hover{
+    color: rgb(67, 92, 143);
+
+}
+
+.r:active{
+    text-decoration: underline;
+}
+
+
+
+
+.firstname{
+    display: block;
+    padding-left: 5px;
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20vw;
+}
+
+
+.lastname{
+    display: block;
+    padding-left: 5px;
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20vw;
+}
+
+
+.firstandlastname{
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .firstandlastname{
+        margin-top: 15%;
+    }
+   
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .firstandlastname{
+        margin-top: 30%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .firstandlastname{
+        margin-top: 37%;
+    }
+
+}
+

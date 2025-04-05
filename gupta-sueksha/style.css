@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: yellowgreen;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+.container {
+    display: flex;
+    gap: 1vw;
+    font-size: 12vw;
+    font-weight: 300;
+}
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.letter {
+    display: inline-block;
+    transition: transform 0.3s ease, font-variation-settings 0.3s ease;
+    font-variation-settings: "wght" 300;
+    cursor: pointer;
+    color: palevioletred;
+}
+
+
+.letter:hover {
+    font-variation-settings: "wght" 900;
+    transform: rotate(-5deg) scale(1.2);
+    color: blue;
+}
+
+
+.letter:active {
+    transform: translateY(10px) rotate(8deg);
+}
+
+
+@media (max-width: 900px) {
+    .name-container { font-size: 10vw; }
+}
+
+@media (max-width: 650px) {
+    .name-container { font-size: 8vh; gap: 2vw; }
+}
+
+@media (max-width: 450px) {
+    .name-container { font-size: 6vw; flex-direction: column; gap: 1vh; }
+}

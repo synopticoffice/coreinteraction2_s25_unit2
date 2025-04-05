@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yiran Wang</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nameTag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "YourSerifVariableFontName", serif;
+      }
+
+      #nameTag span {
+        font-size: 10vw;
+        cursor: pointer;
+        transition: transform 0.3s, color 0.3s;
+        color: grey;
+      }
+
+      @media (max-width: 450px) {
+        #nameTag span {
+          font-size: 15vw;
+          font-style: normal;
+          font-weight: normal;
+        }
+      }
+
+      @media (min-width: 451px) and (max-width: 650px) {
+        #nameTag span {
+          font-size: 13vw;
+          font-style: italic;
+          font-weight: bold;
+        }
+      }
+
+      @media (min-width: 651px) and (max-width: 900px) {
+        #nameTag span {
+          font-size: 12vw;
+          font-style: normal;
+          text-decoration: line-through;
+        }
+      }
+
+      @media (min-width: 901px) {
+        #nameTag span {
+          font-size: 10vw;
+          font-weight: bold;
+        }
+      }
+    </style>
   </head>
   <body>
-  
+    <div id="nameTag">
+      <span>Y</span>
+      <span>i</span>
+      <span>r</span>
+      <span>a</span>
+      <span>n</span>
+    </div>
+    <script>
+      document.querySelectorAll("#nameTag span").forEach((letter) => {
+        letter.addEventListener("mouseover", () => {
+          letter.style.transform = "scale(1.2)";
+          letter.style.color = "pink";
+        });
+        letter.addEventListener("mouseout", () => {
+          letter.style.transform = "scale(1)";
+          letter.style.color = "grey";
+        });
+        letter.addEventListener("click", () => {
+          letter.style.webkitTextStroke = "1px white";
+          letter.style.color = "transparent";
+        });
+      });
+    </script>
   </body>
-  </html>
+</html>

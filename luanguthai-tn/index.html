@@ -3,10 +3,123 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+      <title>TN-L</title>
   
   </head>
+  <style>
+    *{
+      margin: auto;
+      background-color: antiquewhite;
+      font-family: "Cairo Play", sans-serif;
+      color: rgb(74, 12, 44);
+      overflow: hidden;
+    }
+
+    .name{
+      display: flex;
+      font-size: 20rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .T{
+      font-weight: 100;
+      font-variation-settings: "grad" -50, /* -50 to 100 */
+                               "wdth" 50; /* 50 to 150 */                          
+        }
+
+    .T:hover {
+      color: rgb(143, 198, 198);
+        animation: crazytext 2s ease infinite; /* Using the short form */
+    }
+
+     @keyframes crazytext {
+           0% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                    "wdth" 50;
+            }
+            25% {
+              font-weight: 900;
+              font-variation-settings: "grad" -50,
+                                       "wdth" 50;
+            }
+            50% {
+              font-weight: 900;
+              font-variation-settings: "grad" 100,
+                                       "wdth" 50;
+            }
+            75% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                       "wdth" 150;
+            }
+            100% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                        "wdth" 50;
+            }
+        }
+.N{
+      font-weight: 100;
+      font-variation-settings: "grad" -50, /* -50 to 100 */
+                               "wdth" 50; /* 50 to 150 */                          
+        }
+
+    .N:hover {
+      color: rgb(239, 214, 129);
+        animation: crazytext 2s ease infinite; /* Using the short form */
+    }
+
+     @keyframes crazytext {
+           0% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                    "wdth" 50;
+            }
+            25% {
+              font-weight: 900;
+              font-variation-settings: "grad" -50,
+                                       "wdth" 50;
+            }
+            50% {
+              font-weight: 900;
+              font-variation-settings: "grad" 100,
+                                       "wdth" 50;
+            }
+            75% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                       "wdth" 150;
+            }
+            100% {
+              font-weight: 100;
+              font-variation-settings: "grad" -50,
+                                        "wdth" 50;
+            }
+        }
+        @media only screen and (max-width: 450px){
+          body{
+            color: orangered;
+          }
+  }
+        @media only screen and (max-width: 650px){
+          .name{
+          font-size: 10rem;
+          }
+        }
+        @media only screen and (max-width: 900px){
+
+}
+  </style>
   <body>
-  
+  <div class="envelope">
+  <div class="name">
+    <h1 class="T">T</h1>
+    <h1 class="N">N</h1>
+  </div>
+</envelop>
   </body>
   </html>

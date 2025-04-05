@@ -3,10 +3,125 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
+      <title>Rachel Vita</title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: "Sono", monospace;
+            font-weight: 600;
+            background-color: rgb(228, 251, 242);
+        }
+
+        div{
+          font-size: 8em;
+          text-align: center;
+        }
+
+        #r{
+          color: rgb(36, 215, 144);
+          transition: font-weight 0.2s ease-in;
+        }
+        #r:hover{
+          font-weight: 800;
+        }
+        #r:active{
+          color: black;
+        }
+
+        #a{
+          color: pink;
+          transition: color 0.2s ease-in;
+        }
+        #a:hover{
+          color: rgb(230, 118, 137);
+        }
+        #a:active{
+          color: black;
+        }
+
+        #c{
+          color:cornflowerblue;
+          transition: font-weight 0.2s ease-in;
+        }
+        #c:hover{
+          font-weight: 200;
+        }
+        #c:active{
+          color: black;
+        }
+
+        #h{
+          color: rgb(247, 234, 92);
+          transition: color 0.2s ease-in;
+        }
+        #h:hover{
+          color:  rgb(243, 184, 7)
+        }
+        #h:active{
+          color: black;
+        }
+
+        #e{
+          color: rgb(171, 117, 208);
+          transition: font-weight 0.2s ease-in;
+        }
+        #e:hover{
+          font-weight: 400;
+        }
+        #e:active{
+          color: black;
+        }
+
+        #l{
+          color: rgb(250, 176, 86);
+          transition: color 0.2s ease-in;
+        }
+        #l:hover{
+          color: rgb(223, 122, 0);
+        }
+        #l:active{
+          color: black;
+        }
+        
+
+
+        @media screen and (max-width: 900px) {
+            div {
+                font-size: 5.5em;
+            }
+        }
+        
+        @media screen and (max-width: 650px) {
+            div {
+                font-size: 4em;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            div {
+                font-size: 2.5em;
+            }
+        }
+      </style>
   </head>
   <body>
-  
+  <div>
+    <span id="r">r</span>
+    <span id="a">a</span>
+    <span id="c">c</span>
+    <span id="h">h</span>
+    <span id="e">e</span>
+    <span id="l">l</span>
+</div>
   </body>
   </html>

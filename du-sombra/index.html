@@ -3,10 +3,116 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
+      <title>Sombra Du</title>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap" rel="stylesheet">
+      <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          background-color: black;
+          color: white;
+          font-family: 'DM Sans', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+          transition: background-color 0.3s ease;
+        }
+    
+        .name-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+          width: 100vw;
+          height: 100vh;
+          align-content: space-around;
+        }
+    
+        .letter {
+          display: inline-block;
+          font-size: 10vw;
+          font-variation-settings: 'wght' 400;
+          transition: color 0.3s ease, font-variation-settings 0.4s ease-in-out;
+          cursor: pointer;
+        }
+    
+        .letter:hover {
+          font-variation-settings: 'wght' 800;
+        }
+    
+        .letter[data-color="red"]:hover { color: #FF6B6B; }
+        .letter[data-color="yellow"]:hover { color: #FFD93D; }
+        .letter[data-color="green"]:hover { color: #6BCB77; }
+        .letter[data-color="blue"]:hover { color: #4D96FF; }
+        .letter[data-color="purple"]:hover { color: #C780FA; }
+        .letter[data-color="orange"]:hover { color: #FFB562; }
+        .letter[data-color="pink"]:hover { color: #F94C66; }
+        .letter[data-color="violet"]:hover { color: #845EC2; }
+    
+        .surname {
+          opacity: 0.6;
+        }
+    
+        @media (max-width: 900px) {
+          .letter { font-size: 12vw; }
+        }
+    
+        @media (max-width: 650px) {
+          .letter { font-size: 14vw; }
+        }
+    
+        @media (max-width: 450px) {
+          .letter { font-size: 16vw; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="name-container">
+        <span class="letter" data-color="red">S</span>
+        <span class="letter" data-color="yellow">o</span>
+        <span class="letter" data-color="green">m</span>
+        <span class="letter" data-color="blue">b</span>
+        <span class="letter" data-color="purple">r</span>
+        <span class="letter" data-color="orange">a</span>
+        <span class="letter surname" data-color="pink">D</span>
+        <span class="letter surname" data-color="violet">u</span>
+      </div>
+    
+      <script>
+        const letters = document.querySelectorAll('.letter');
+        const body = document.body;
+    
+        letters.forEach(letter => {
+          const colorMap = {
+            red: '#FF6B6B',
+            yellow: '#FFD93D',
+            green: '#6BCB77',
+            blue: '#4D96FF',
+            purple: '#C780FA',
+            orange: '#FFB562',
+            pink: '#F94C66',
+            violet: '#845EC2'
+          };
+    
+          letter.addEventListener('mousedown', () => {
+            const color = letter.getAttribute('data-color');
+            body.style.backgroundColor = colorMap[color] || 'black';
+          });
+    
+          letter.addEventListener('mouseup', () => {
+            body.style.backgroundColor = 'black';
+          });
+    
+          letter.addEventListener('mouseleave', () => {
+            body.style.backgroundColor = 'black';
+          });
+        });
+      </script>
+    </body>
   </html>

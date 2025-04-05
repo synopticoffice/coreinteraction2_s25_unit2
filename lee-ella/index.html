@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ella</title>
+  <style>
+    @font-face {
+      font-family: "RobotoFlex";
+      src: url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+
+    .name {
+      display: flex;
+      gap: 1vw;
+      font-family: "Roboto Flex", sans-serif;
+      font-size: 10vw;
+      font-variation-settings: "wght" 300;
+      transition: all 0.3s ease;
+    }
+
+    .letter {
+      cursor: pointer;
+      transition: transform 0.3s ease, font-variation-settings 0.3s ease;
+    }
+
+    .letter:hover {
+      transform: scale(1.2) rotate(-5deg);
+      font-variation-settings: "wght" 700;
+    }
+
+    .letter:active {
+      transform: scale(1.1) rotate(5deg);
+      font-variation-settings: "wght" 900;
+    }
+
+    @media (max-width: 900px) {
+      .name { font-size: 12vw; }
+    }
+
+    @media (max-width: 650px) {
+      .name { font-size: 14vw; }
+    }
+
+    @media (max-width: 450px) {
+      .name { font-size: 16vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <div class="letter">E</div>
+    <div class="letter">L</div>
+    <div class="letter">L</div>
+    <div class="letter">A</div>
+  </div>
+</body>
+</html>

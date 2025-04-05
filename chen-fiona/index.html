@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiona Chen</title>
+
+  <!-- Variable font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #e6e7d6;
+      color: rgb(0, 0, 0);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .name {
+      display: flex;
+    }
+
+    .letter {
+      font-family: "Inter", sans-serif;
+      font-size: 250px;
+      font-variation-settings: "wght" 400, "slnt" 0;
+      transition: transform 0.3s ease, color 0.3s ease, font-variation-settings 0.3s ease;
+      cursor: pointer;
+    }
+
+    .letter:hover {
+      transform: scale(1.2) rotate(-5deg);
+      color: #ffd900;
+      font-variation-settings: "wght" 400;
+      font-style: italic;
+    }
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-30px); }
+      60%  { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+      </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">f</span>
+    <span class="letter">i</span>
+    <span class="letter">o</span>
+    <span class="letter">n</span>
+    <span class="letter">a</span>
+  </div>
+</body>
+</html>

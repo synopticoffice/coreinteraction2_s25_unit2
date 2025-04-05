@@ -1,0 +1,90 @@
+  .r1 {
+    left: 254px;
+    top: 354px;
+    position: absolute;
+    color: black;
+    font-family: "Jacquarda Bastarda 9";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.e1 {
+    left: 503px;
+    top: 368px;
+    position: absolute;
+    color: black;
+    font-family: "Gwendolyn";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.i1 {
+    left: 683px;
+    top: 342px;
+    position: absolute;
+    color: black;
+    font-family: "Danfo";
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.k1 {
+    left: 799px;
+    top: 354px;
+    position: absolute;
+    color: black;
+    font-family: "Jacquarda Bastarda 9";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.a1 {
+    left: 1010px;
+    top: 342px;
+    position: absolute;
+    color: black;
+    font-family: "Danfo";
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.r1:hover {
+    color: #FF0090;
+}
+
+.e1:hover {
+    color: #0026FF;
+}
+
+.i1:hover {
+    color: #FFE100;
+}
+
+.k1:hover {
+    color: #00FFFF;
+}
+
+.a1:hover {
+    color: #2AFF00;
+}
+
+      /* For 450px viewport */
+      @media (max-width: 450px) {
+        .names div {
+          font-size: 150px; /* Adjust text size for small screens */
+        }
+      }
+
+      /* For 650px viewport */
+      @media (max-width: 650px) {
+        .names div {
+          font-size: 200px; /* Adjust text size for medium screens */
+        }
+      }
+
+      /* For 900px viewport */
+      @media (max-width: 900px) {
+        .names div {
+          font-size: 250px; /* Adjust text size for larger screens */
+        }
+      }

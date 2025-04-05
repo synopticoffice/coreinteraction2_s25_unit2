@@ -1,12 +1,142 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constance Dugauguez</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/swc2rbr.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(178, 197, 255);
+            color: rgb(18, 11, 79);
+
+            font-family: "gyst-variable",sans-serif;
+            font-variation-settings: 'wght' 181;
+
+        }
+        .name {
+            display: flex;
+            gap: 5px;
+        }
+        .name {
+            font-family: "gyst-variable",sans-serif;
+            font-size: 15vw;
+            font-style: italic;
+            font-variation-settings: 'wght' 100;
+            transition: transform 0.2s, font-variation-settings 0.2s;
+
+            
+        }
+
+        /*** c *****/
+        .letterC:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+
+            font-variation-settings: 'wght' 200;
+        }
+        .letterC:active {
+            transform: rotate(10deg);
+        }
+
+        /*** o *****/
+        .letterO:hover {
+            transform: scale(1.2);
+            cursor: wait;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterO:active {
+            transform: rotate(10deg);
+        }
+        /*** n *****/
+        .letterN:hover {
+            transform: scale(1.2);
+            cursor: crosshair;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterN:active {
+            transform: rotate(10deg);
+        }
+
+          /*** s *****/
+          .letterS:hover {
+            transform: scale(1.2);
+            cursor: not-allowed;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterS:active {
+            transform: rotate(10deg);
+        }
+
+
+          /*** t *****/
+          .letterT:hover {
+            transform: scale(1.2);
+            cursor: zoom-in;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterT:active {
+            transform: rotate(10deg);
+        }
+
+            /*** a *****/
+            .letterA:hover {
+            transform: scale(1.2);
+            cursor: grab;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterA:active {
+            transform: rotate(10deg);
+        }
+
+
+            /*** e *****/
+            .letterE:hover {
+            transform: scale(1.2);
+            cursor: zoom-out;
+            
+            font-variation-settings: 'wght' 200;
+        }
+        .letterE:active {
+            transform: rotate(10deg);
+        }
+
   
-  </head>
-  <body>
-  
-  </body>
-  </html>
+
+        @media (max-width: 900px) {
+            .letter { font-size: 15vw; }
+        }
+        @media (max-width: 650px) {
+            .letter { font-size: 12vw; }
+        }
+        @media (max-width: 450px) {
+            .letter { font-size: 10vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letterC">C</span>
+        <span class="letterO">o</span>
+        <span class="letterN">n</span>
+        <span class="letterS">s</span>
+        <span class="letterT">t</span>
+        <span class="letterA">a</span>
+        <span class="letterN">n</span>
+        <span class="letterC">c</span>
+        <span class="letterE">e</span>
+    </div>
+</body>
+</html>

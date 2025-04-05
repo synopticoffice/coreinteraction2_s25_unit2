@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charis Pao</title>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      background-color: lightsteelblue;
+      color: navy;
+      place-items: center;
+      height: 100vh;
+      font-family: "Gyst Variable"
+    }
+
+    .letter {
+      font-size: 35vw;
+      transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
+    }
+
+    .envelope {
+      display: flex;
+    }
+
+    .c,
+    .h,
+    .a,
+    .r,
+    .i,
+    .s {
+      font-size: 35vw;
+
+    }
+
+    .c:hover {
+      color: blanchedalmond;
+      font-weight: 200;
+    }
+
+    .c:active {
+      color: black;
+      font-weight: 200;
+    }
+
+    .h:hover {
+      color: blanchedalmond;
+      font-weight: 900;
+    }
+
+    .h:active {
+      color: black;
+      font-weight: 200;
+    }
+
+    .a:hover {
+      color: blanchedalmond;
+      font-weight: 100;
+    }
+
+    .a:active {
+      color: black;
+      font-weight: 200;
+    }
+
+    .r:hover {
+      color: blanchedalmond;
+      font-weight: 600;
+    }
+
+    .r:active {
+      color: black;
+      font-weight: 200;
+    }
+
+    .i:hover {
+      color: blanchedalmond;
+      font-weight: 200;
+    }
+
+    .i:active {
+      color: black;
+      font-weight: 200;
+    }
+
+    .s:hover {
+      color: blanchedalmond;
+      font-weight: 800;
+    }
+
+    .s:active {
+      color: black;
+      font-weight: 200;
+    }
+
+
+    @media screen and (max-width: 900px) {
+      .letter {
+        font-size: 10em;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .letter {
+        font-size: 5em;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .letter {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="envelope">
+    <div class="letter c">c</div>
+    <div class="letter h">h</div>
+    <div class="letter a">a</div>
+    <div class="letter r">r</div>
+    <div class="letter i">i</div>
+    <div class="letter s">s</div>
+  </div>
+
+</body>
+
+</html>

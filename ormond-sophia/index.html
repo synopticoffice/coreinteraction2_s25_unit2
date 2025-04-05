@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia</title>
+    <style>
+        @font-face {
+            font-family: 'PlayfairVariable';
+            src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&display=swap');
+            font-weight: 100 900;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .name {
+            display: flex;
+            gap: 5px;
+        }
+        .letter {
+            font-family: 'PlayfairVariable', serif;
+            font-size: 20vw;
+            font-weight: 400;
+            color: rgb(0, 79, 7);
+            text-transform: uppercase;
+            transition: transform 0.3s, font-weight 0.3s;
+        }
+        .letter:hover {
+            transform: scale(.5);
+            font-weight: 900;
+        }
+        .letter:active {
+            transform: rotate(180deg);
+            font-weight: 600;
+        }
+        @media (max-width: 900px) {
+            .letter { font-size: 18vw; }
+        }
+        @media (max-width: 650px) {
+            .letter { font-size: 22vw; }
+        }
+        @media (max-width: 450px) {
+            .letter { font-size: 26vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter">S</span>
+        <span class="letter">O</span>
+        <span class="letter">P</span>
+        <span class="letter">H</span>
+        <span class="letter">I</span>
+        <span class="letter">A</span>
+    </div>
+</body>
+</html>

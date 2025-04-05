@@ -1,0 +1,50 @@
+
+.envelope {text-align: center;}
+.Z{text-align: center;
+font-size: 15em;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: deeppink;
+background-color:darkred;
+border-radius: 2cm;
+margin-bottom: 1cm;
+margin-left: 4cm;
+margin-right: 4cm;
+transition: transform 0.5s ease,
+background-color 0.8s linear 0.5s;}
+.Z:hover {
+    background-color: yellow;
+    transform: scale(1.25, 1.25);}
+.Z:active {
+    transform: scale(95%);}
+
+.O{text-align: center;
+    font-size: 15em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: crimson;
+background-color: salmon;
+border-radius: 2cm;
+margin-bottom: 1cm;
+margin-left: 4cm;
+margin-right: 4cm;
+Transition: transform 0.5s ease;}
+
+.O:hover{
+    transform: rotate(0.5turn);
+    background-color: rgb(255, 68, 0);}
+
+.O:active{
+    transform: rotate(0.5turn);}
+
+.E{text-align: center;
+    font-size: 15em;
+    color: coral;
+background-color:pink;
+border-radius: 2cm;
+margin-bottom: 1cm;
+margin-left: 4cm;
+margin-right: 4cm;}
+
+.E:hover {
+    font-weight: 900;
+background-color: deeppink;
+    font-size: 10em;}

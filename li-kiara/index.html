@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+    <title>Kiara</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #88ccff, #4477aa, #112233);
+            color: white;
+            margin: 0;
+            overflow: hidden;
+            animation: backgroundShift 10s infinite alternate ease-in-out;
+            transition: background 0.1s ease;
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background: linear-gradient(to bottom, #88ccff, #4477aa, #112233);
+            }
+            50% {
+                background: linear-gradient(to bottom, #336699, #224477, #001a33);
+            }
+            100% {
+                background: linear-gradient(to bottom, #112233, #001a33, #000a1a);
+            }
+        }
+
+        .name {
+            display: flex;
+            gap: 10px;
+            font-family: 'Kalnia Glaze', sans-serif;
+            font-size: 10vw;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .letter {
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            animation: letterFloat 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes letterFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .letter:hover {
+            transform: scale(1.2) rotate(10deg);
+            color: #66aaff;
+        }
+
+        .letter:active {
+            animation: letterDrop 0.5s ease-in-out;
+        }
+
+        @keyframes letterDrop {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .letter:active ~ body {
+            background: black !important;
+        }
+
+        @media (max-width: 900px) {
+            .name {
+                font-size: 15vw;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .name {
+                font-size: 20vw;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .name {
+                flex-direction: column;
+                font-size: 25vw;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="letter">K</span>
+        <span class="letter">I</span>
+        <span class="letter">A</span>
+        <span class="letter">R</span>
+        <span class="letter">A</span>
+    </div>
+</body>
+</html>

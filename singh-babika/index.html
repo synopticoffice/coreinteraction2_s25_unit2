@@ -1,12 +1,117 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babika Singh</title>
+    <style>
+        @font-face {
+            font-family: Decovar;
+            src: url("https://d33wubrfki0l68.cloudfront.net/35138c441efe5077f7f1b5437d8033d58b98e203/952fc/assets/fonts/variable/decovaralpha-vf.subset.ttf")
+            format("truetype-variations");
+        }
+        @font-face {
+            font-family: "Source Sans";
+            src: url("https://d33wubrfki0l68.cloudfront.net/f0f35e1c78339e9ab650f7d10a2b30af1ec0104a/147e5/assets/fonts/variable/sourcesansvariable-roman.ttf")
+            format("truetype-variations");
+            font-weight: 1 999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .source-sans, .source-sans2 {
+            display: flex;
+            gap: 1vw;
+            flex-wrap: wrap;
+            font-family: "Source Sans";
+            font-size: 15vh; /* Base text size */
+            font-weight: 900;
+            color: rgb(0, 0, 0);
+        }
+
+        .letter {
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Decrease size of every other letter */
+        .letter:nth-child(even) {
+            font-size: 0.7em; /* Adjust size down */
+        }
+
+        /* Hover effect */
+        .letter:hover {
+            transform: scale(1.2);
+            color: purple;
+        }
+
+        @media (max-width: 768px) {
+            .source-sans, .source-sans2 {
+                font-size: 10vh; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-container">
+        <div class="source-sans">
+            <span class="letter">B</span>
+            <span class="letter">a</span>
+            <span class="letter">b</span>
+            <span class="letter">i</span>
+            <span class="letter">k</span>
+            <span class="letter">a</span>
+        </div>
+        
+        <div class="source-sans2">
+            <span class="letter">S</span>
+            <span class="letter">i</span>
+            <span class="letter">n</span>
+            <span class="letter">g</span>
+            <span class="letter">h</span>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.letter').forEach(letter => {
+            letter.addEventListener('click', () => {
+                letter.style.color = getRandomColor();
+            });
+        });
+
+        function getRandomColor() {
+            return `hsl(${Math.random() * 360}, 100%, 70%)`; 
+        }
+    </script>
+
+</body>
+</html>
+
+

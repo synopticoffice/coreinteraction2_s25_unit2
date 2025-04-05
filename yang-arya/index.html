@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name Tag - Arya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,MONO@-15..0,300..1000,0..1,0..1&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+      color: #fff;
+      font-family: 'Recursive', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 0.3em;
+    }
+
+    .letter {
+      font-size: 15vw;
+      cursor: pointer;
+      padding: 0 0.1em;
+      line-height: 1;
+      transition: all 0.4s ease;
+      font-variation-settings: "wght" 400, "slnt" 0, "CASL" 0.2, "MONO" 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      color: #f4a8c8;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-0.3em);
+      }
+    }
+
+    .letter:hover {
+      color: #f4a8c8;
+      font-variation-settings: "wght" 800, "slnt" -10, "CASL" 1, "MONO" 0;
+      transform: scale(1.1) rotate(-2deg);
+      text-shadow: 2px 2px 6px rgba(244, 168, 200, 0.3);
+    }
+
+    .letter:active {
+      color: #f1bcd3;
+      transform: scale(0.95) rotate(2deg);
+      font-variation-settings: "wght" 600, "slnt" 8, "CASL" 0.5, "MONO" 0.2;
+      text-shadow: 2px 2px 8px rgba(241, 188, 211, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 13vw;
+        font-variation-settings: "wght" 500, "slnt" -5, "CASL" 0.5;
+        color: #c5a8f4; 
+      }
+
+      .letter:hover {
+        color: #c5a8f4;
+        text-shadow: 2px 2px 6px rgba(197, 168, 244, 0.3);
+      }
+
+      .letter:active {
+        color: #d9c1f7;
+        text-shadow: 2px 2px 8px rgba(217, 193, 247, 0.4);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 10vw;
+        font-variation-settings: "wght" 600, "slnt" 0, "CASL" 1;
+        color: #a8d1f4; 
+
+      .letter:hover {
+        color: #a8d1f4;
+        text-shadow: 2px 2px 6px rgba(168, 209, 244, 0.3);
+      }
+
+      .letter:active {
+        color: #c0e0f7;
+        text-shadow: 2px 2px 8px rgba(192, 224, 247, 0.4);
+      }
+    }
+  }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 9vw;
+        font-variation-settings: "wght" 700, "slnt" 5, "CASL" 1;
+        letter-spacing: 0.1em;
+        padding: 0 0.2em;
+        color: #b8e4f4;
+      }
+
+      .letter:hover {
+        color: #b8e4f4;
+        text-shadow: 2px 2px 6px rgba(184, 228, 244, 0.3);
+      }
+
+      .letter:active {
+        color: #d2f0fb;
+        text-shadow: 2px 2px 8px rgba(210, 240, 251, 0.4);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">A</span>
+    <span class="letter">R</span>
+    <span class="letter">Y</span>
+    <span class="letter">A</span>
+  </div>
+</body>
+</html>

@@ -3,10 +3,60 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
+      <title>Maya Ye</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+      <style>
+        body {
+          margin: 0;
+          background-color: rgb(8, 120, 200);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Pixelify Sans';
+        }
+        .name {
+          display: flex;
+          gap: 2vw;
+        }
+        .letter {
+          font-size: 15vw;
+          font-weight: bold;
+          color: rgb(86, 65, 58);
+          transition: all 0.4s ease;
+          cursor: pointer;
+          width: 12vw;
+          text-align: center;
+        }
+        .letter:hover {
+          transform: scale(1.05);
+          text-shadow: 0 0 20px rgb(255, 255, 255);
+        }
+        .letter.fade {
+          opacity: 0;
+          pointer-events: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="name" id="nameContainer"></div>
+    
+      <script>
+        const name = "MAYA"; 
+        const container = document.getElementById("nameContainer");
+    
+        name.split("").forEach(letter => {
+          const span = document.createElement("span");
+          span.className = "letter";
+          span.textContent = letter;
+          span.addEventListener("click", () => {
+            span.classList.add("fade");
+          });
+          container.appendChild(span);
+        });
+      </script>
+    </body>
   </html>

@@ -1,12 +1,131 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sonia Chen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght@-15..0,300..1000&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .name-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .letter {
+      font-size: 12rem;
+      font-variation-settings: "wght" 400, "slnt" 0;
+      margin: 0.1em;
+      user-select: none;
+      transition: all 0.4s ease;
+      filter: blur(4px);
+      opacity: 0.6;
+      cursor: pointer;
+      color: black;
+    }
+
+    .letter:hover {
+      font-size: 13rem;
+      filter: blur(0);
+      opacity: 1;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .letter:active {
+      font-variation-settings: "wght" 700, "slnt" -10;
+      transform: scale(1.1) rotate(-3deg);
+      filter: none;
+      opacity: 1;
+    }
+
+    .S:hover {
+      background-image: linear-gradient(135deg, #ff6b6b, #56140d);
+    }
+
+    .o:hover {
+      background-image: linear-gradient(135deg, #6bc1ff, #2980b9);
+    }
+
+    .n:hover {
+      background-image: linear-gradient(135deg, #fffef8, #947703);
+    }
+
+    .i:hover {
+      background-image: linear-gradient(135deg, #6bff95, #0e6231);
+    }
+
+    .a:hover {
+      background-image: linear-gradient(135deg, #e66bff, #290936);
+    }
+
+    .S:active {
+      background-image: linear-gradient(135deg, #ff6b6b, #c0392b);
+      font-family:cursive;
+
+    }
+
+    .o:active {
+      background-image: linear-gradient(135deg, #6bc1ff, #2980b9);
+      font-family:cursive;
+    }
+
+    .n:active {
+      background-image: linear-gradient(135deg, #ffe66d, #f1c40f);
+      font-family:cursive;
+    }
+
+    .i:active {
+      background-image: linear-gradient(135deg, #6bff95, #27ae60);
+      font-family:cursive;
+    }
+
+    .a:active {
+      background-image: linear-gradient(135deg, #e66bff, #530e70);
+      font-family:cursive;
+    }
+
+    
+
+    @media (max-width: 900px) {
+      .letter { font-size: 12rem; }
+    }
+
+    @media (max-width: 650px) {
+      .letter { font-size: 6rem; }
+    }
+
+    @media (max-width: 450px) {
+      .letter { font-size: 4rem; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="name-container">
+    <span class="letter S">S</span>
+    <span class="letter o">o</span>
+    <span class="letter n">n</span>
+    <span class="letter i">i</span>
+    <span class="letter a">a</span>
+  </div>
+</body>
+</html>

@@ -6,7 +6,55 @@
       <title>Your Name Here</title>
   
   </head>
-  <body>
-  
-  </body>
-  </html>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+    
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0d1a0d;
+        overflow: hidden;
+    }
+    .name {
+        display: flex;
+        gap: 10px;
+    }
+    .letter {
+        font-family: 'Rubik Glitch', sans-serif;
+        font-size: 15vw;
+        color: #669966;
+        transition: transform 0.3s ease, color 0.3s ease;
+        user-select: none;
+    }
+    .letter:hover {
+        transform: scale(1.2) rotate(5deg);
+        color: #cc6666;
+    }
+    .letter:active {
+        transform: scale(0.8) rotate(-5deg);
+        color: #993333;
+    }
+    @media (max-width: 900px) {
+        .letter { font-size: 12vw; }
+    }
+    @media (max-width: 650px) {
+        .letter { font-size: 10vw; }
+    }
+    @media (max-width: 450px) {
+        .letter { font-size: 8vw; }
+    }
+</style>
+</head>
+<body>
+<span style="font-size: 5vw;">🌱</span>
+    <span class="letter">L</span>
+    <span class="letter">I</span>
+    <span class="letter">N</span>
+    <span class="letter">D</span>
+    <span class="letter">A</span>
+<span style="font-size: 5vw;">🏛</span>
+</body>
+</html>

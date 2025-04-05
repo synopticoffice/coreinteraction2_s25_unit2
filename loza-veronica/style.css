@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    font-size: 20em;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        font-size: 9em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        font-size: 2em;
+    }
+}
+
+.container {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.v {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition-duration: 1s;
+}
+
+.v:hover {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    rotate: 10deg;
+
+}
+
+.e {
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    bottom: 70px;
+    transition-duration: 1s;
+}
+
+.e:hover {
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    filter: blur(2px);
+    color: green;
+}
+
+.r {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.r:hover {
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    bottom: 70px;
+    animation: glow 1s ease-in-out infinite;
+    color: #f39c12;
+}
+
+.o {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.o:active {
+    color: blue;
+}
+
+.n {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.n:hover {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F3CE5E;
+    transition-duration: 1s;
+}
+
+.n:hover::before,
+.n:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+@keyframes clockwise {
+    0% {
+        top: -5px;
+        left: 0;
+    }
+
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+
+    25% {
+        top: 0;
+        left: 5px;
+    }
+
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+
+    50% {
+        top: 5px;
+        left: 0;
+    }
+
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+
+    75% {
+        top: 0;
+        left: -5px;
+    }
+
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+
+    100% {
+        top: -5px;
+        left: 0;
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -5px;
+        right: 0;
+    }
+
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+
+    25% {
+        top: 0;
+        right: 5px;
+    }
+
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+
+    50% {
+        top: 5px;
+        right: 0;
+    }
+
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+
+    75% {
+        top: 0;
+        right: -5px;
+    }
+
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+
+    100% {
+        top: -5px;
+        right: 0;
+    }
+}
+
+.n:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+}
+
+.i {
+    transition-duration: 1s;
+}
+
+.i:hover {
+    position: relative;
+    font-size: larger;
+    bottom: 70px;
+    display: inline-block;
+    animation: wiggle 0.3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+.c {
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    bottom: 70px;
+}
+
+.c:hover {
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    bottom: 70px;
+    animation: pulse 0.5s ease-in-out infinite;
+    color: #ff6347;
+}
+
+.a {
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.a:hover {
+    animation: spin 0.5s ease-in-out;
+    color: #32cd32;
+    font-family: "fit-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f39c12, 0 0 20px #f39c12, 0 0 25px #f39c12;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e67e22, 0 0 40px #e67e22, 0 0 50px #e67e22;
+    }
+}
